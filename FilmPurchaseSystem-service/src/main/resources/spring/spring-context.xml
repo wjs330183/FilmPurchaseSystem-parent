@@ -9,6 +9,21 @@
 
     <!-- 开启IOC注解扫描 -->
     <context:component-scan base-package="service"/>
+    <context:property-placeholder location="classpath:configlocal/jdbc.properties"/>
+
+
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+    </bean>
+
+    <bean id="sqlsessionfactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:/mapper/*.xml"/>
+    </bean>
+
 
     <!-- 根据Dao接口生成接口对象 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
