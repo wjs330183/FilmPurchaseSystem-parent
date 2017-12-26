@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FilmPurchaseSystem-client/FilmPurchaseSystem-client.iml" filepath="$PROJECT_DIR$/FilmPurchaseSystem-client/FilmPurchaseSystem-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/FilmPurchaseSystem-parent.iml" filepath="$PROJECT_DIR$/FilmPurchaseSystem-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" filepath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
     </modules>
   </component>
 </project>
