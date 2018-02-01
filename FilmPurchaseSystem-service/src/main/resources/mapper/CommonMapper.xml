@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="dao.CommonDao">
+    <select id="getTable" resultType="String">
+        SELECT  group_concat(column_name separator ',') AS columns
+        FROM information_schema.columns
+        WHERE table_schema = 'film' AND table_name = #{tableName} AND column_name != 'id'
+        GROUP BY table_name
+    </select>
+
+</mapper>
