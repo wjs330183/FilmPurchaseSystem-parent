@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/FilmPurchaseSystem-client/target/" />
@@ -95,9 +93,9 @@
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <marker date="1517451818819" expanded="true" signature="257:473" ph="SELECT group... columns" />
+                <marker date="1517451840274" expanded="true" signature="257:473" ph="SELECT group... columns" />
               </folding>
             </state>
           </provider>
@@ -473,7 +471,7 @@
       <workItem from="1516346830957" duration="48000" />
       <workItem from="1516610346375" duration="1610000" />
       <workItem from="1517382333875" duration="996000" />
-      <workItem from="1517451138160" duration="680000" />
+      <workItem from="1517451138160" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="建立文件夹">
       <created>1516610599410</created>
@@ -489,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517383314473</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="common.xml/dao">
+      <created>1517451843464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517451843464</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -498,7 +503,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3334000" />
+    <option name="totallyTimeSpent" value="3361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="194" y="283" width="1378" height="741" extended-state="0" />
@@ -545,7 +550,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="建立文件夹" />
     <MESSAGE value="redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis" />
+    <MESSAGE value="common.xml/dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="common.xml/dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -742,9 +748,9 @@
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1517451818819" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1517451840274" expanded="true" signature="257:473" ph="SELECT group... columns" />
           </folding>
         </state>
       </provider>
