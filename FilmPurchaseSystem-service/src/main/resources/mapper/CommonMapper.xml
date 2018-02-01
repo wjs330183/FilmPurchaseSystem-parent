@@ -9,4 +9,18 @@
         GROUP BY table_name
     </select>
 
+    <insert id="batchCreateTable">
+        <foreach collection="datas" index="index" item="data" open="" separator=";" close="">
+            INSERT INTO ${tableName};
+            <foreach collection="data.keys" index="index" item="column" open="(" separator=";"
+                     close=")">
+                ${column}
+            </foreach>
+            VALUES
+            <foreach collection="data.values" index="index" item="val" open="(" separator=";"
+                     close=")">
+                #{val}
+            </foreach>
+        </foreach>
+    </insert>
 </mapper>
