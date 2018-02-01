@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="">
+    <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="common.xml/dao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/FilmPurchaseSystem-client/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -424,7 +422,7 @@
       <workItem from="1516346830957" duration="48000" />
       <workItem from="1516610346375" duration="1610000" />
       <workItem from="1517382333875" duration="996000" />
-      <workItem from="1517451138160" duration="1070000" />
+      <workItem from="1517451138160" duration="1083000" />
     </task>
     <task id="LOCAL-00001" summary="建立文件夹">
       <created>1516610599410</created>
@@ -454,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517451849371</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="common.xml/dao">
+      <created>1517452215599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1517452215599</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -463,7 +468,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3724000" />
+    <option name="totallyTimeSpent" value="3737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="194" y="283" width="1378" height="741" extended-state="0" />
