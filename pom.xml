@@ -8,14 +8,7 @@
   <modules>
     <module>FilmPurchaseSystem-client</module>
     <module>FilmPurchaseSystem-service</module>
-      <module>FilmPurchaseSystem-client</module>
   </modules>
   <name>parent Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-
-  </dependencies>
-  <build>
-    <finalName>parent</finalName>
-  </build>
 </project>
