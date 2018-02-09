@@ -23,4 +23,21 @@
             </foreach>
         </foreach>
     </insert>
+    <update id="batchUpdate">
+        <foreach collection="datas" index="index0" item="singleData" open="" separator=";" close="">
+            UPDATE ${tableName} SET
+            <foreach collection="singleData" index="index1" item="column" open="" separator="," close="">
+                <if test="column!=null">
+                    ${index1}=${column}
+                </if>
+            </foreach>
+            WHERE disabled=1 AND information=
+            <foreach collection="singleData" index="index2" item="columm2" open="" separator=","
+                     close="">
+                <if test="index2 == 'information'">
+                    #{columm2}
+                </if>
+            </foreach>
+        </foreach>
+    </update>
 </mapper>
