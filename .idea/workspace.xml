@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/FilmPurchaseSystem-client/target/" />
@@ -61,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="75">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#461#462#0" expanded="true" />
@@ -87,6 +88,16 @@
                 <element signature="e#1167#1168#0" expanded="true" />
                 <element signature="e#1205#1206#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,6 +140,7 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java" />
       </list>
     </option>
   </component>
@@ -608,7 +620,7 @@
       <workItem from="1517795089830" duration="1412000" />
       <workItem from="1517799439468" duration="783000" />
       <workItem from="1517809245665" duration="1581000" />
-      <workItem from="1518146289324" duration="1729000" />
+      <workItem from="1518146289324" duration="1759000" />
     </task>
     <task id="LOCAL-00001" summary="建立文件夹">
       <created>1516610599410</created>
@@ -673,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518148019663</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="customer创建">
+      <created>1518148023000</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1518148023000</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -685,7 +704,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13752000" />
+    <option name="totallyTimeSpent" value="13782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -742,16 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-parent.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1165,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="75">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding>
             <element signature="e#409#410#0" expanded="true" />
             <element signature="e#461#462#0" expanded="true" />
@@ -1188,6 +1197,14 @@
             <element signature="e#1167#1168#0" expanded="true" />
             <element signature="e#1205#1206#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
