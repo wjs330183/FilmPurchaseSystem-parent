@@ -58,12 +58,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>4.2.1.RELEASE</version>
         </dependency>
-
-        <dependency>
-            <groupId>jiliang.xianke</groupId>
-            <artifactId>FilmPurchaseSystem-client</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <!--mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -91,6 +85,11 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>jiliang.xianke</groupId>
+            <artifactId>FilmPurchaseSystem-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
