@@ -61,5 +61,6 @@ public class Customer {
     public void setClassId(String classId) {
         this.classId = classId;
     }
+
 }
 

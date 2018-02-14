@@ -10,6 +10,10 @@
     <packaging>war</packaging>
     <name>FilmPurchaseSystem-service Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <properties>
+        <!-- 设置默认编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencies>
         <!--spring-->
         <dependency>

@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java" />
-    </list>
+    <list default="true" id="08aaee8c-be86-41fc-b67c-8f74cdb8c1bf" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/FilmPurchaseSystem-client/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +35,8 @@
       <file leaf-file-name="CommonDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="152">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,18 +47,28 @@
       <file leaf-file-name="CustomerDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CustomerDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="38">
               <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="61" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="63" />
+            <state relative-caret-position="76">
+              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NullTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,23 +77,21 @@
       <file leaf-file-name="CommonMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="209">
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-                <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-                <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-                <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
+                <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+                <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="95">
+              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -98,9 +100,10 @@
       <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="836">
+              <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
               <folding>
+                <element signature="e#376#377#0" expanded="true" />
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#461#462#0" expanded="true" />
                 <element signature="e#505#506#0" expanded="true" />
@@ -125,11 +128,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="90" column="41" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
+            <state relative-caret-position="133">
+              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -138,8 +151,8 @@
       <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="76">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,12 +194,12 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CustomerDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CostomerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
       </list>
     </option>
   </component>
@@ -206,7 +219,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Program Files/apache-maven-3.3.9" />
+        <option name="localRepository" value="D:\maven\jb" />
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.5.2" />
         <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -248,11 +262,11 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="807" />
-    <option name="y" value="95" />
-    <option name="width" value="1232" />
-    <option name="height" value="741" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -270,6 +284,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,24 +317,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -371,34 +368,7 @@
               <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="configclient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="configlocal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -423,14 +393,6 @@
               <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
               <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,17 +409,16 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -476,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat">
+  <component name="RunManager" selected="JUnit.NullTest.sendNoticeTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -685,6 +646,9 @@
       <workItem from="1517799439468" duration="783000" />
       <workItem from="1517809245665" duration="1581000" />
       <workItem from="1518146289324" duration="2956000" />
+      <workItem from="1518579572243" duration="1571000" />
+      <workItem from="1518581312692" duration="4521000" />
+      <workItem from="1518586600435" duration="496000" />
     </task>
     <task id="LOCAL-00001" summary="建立文件夹">
       <created>1516610599410</created>
@@ -780,18 +744,41 @@
     <history-entry file="NullTest_sendNoticeTest - 2018.02.02 at 15h 11m 35s.xml">
       <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 12h 51m 07s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 12h 51m 54s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 04m 37s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 26m 32s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 37m 26s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 38m 46s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 44m 24s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NullTest_sendNoticeTest - 2018.02.14 at 13h 44m 48s.xml">
+      <configuration name="NullTest.sendNoticeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14979000" />
+    <option name="totallyTimeSpent" value="21567000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444563" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14901665" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -800,18 +787,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48026314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18070363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29500756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -819,6 +805,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -835,7 +822,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="customer创建" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -844,10 +833,8 @@
         <state relative-caret-position="300">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-            <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
+            <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
           </folding>
         </state>
       </provider>
@@ -864,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,10 +873,8 @@
         <state relative-caret-position="300">
           <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-            <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
+            <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
           </folding>
         </state>
       </provider>
@@ -908,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,10 +941,8 @@
         <state relative-caret-position="625">
           <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
-            <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-            <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
+            <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
           </folding>
         </state>
       </provider>
@@ -997,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,10 +984,8 @@
         <state relative-caret-position="625">
           <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
-            <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-            <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
+            <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
           </folding>
         </state>
       </provider>
@@ -1025,9 +1001,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2150">
           <caret line="86" column="36" lean-forward="false" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-          <folding>
-            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,7 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,9 +1060,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2150">
           <caret line="86" column="36" lean-forward="false" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-          <folding>
-            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,13 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/configlocal/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1149,15 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,36 +1134,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/UserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="9" />
+        <state relative-caret-position="209">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding>
-            <marker date="1518147781878" expanded="true" signature="257:473" ph="SELECT group... columns" />
-            <marker date="1518147781878" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1222" ph="UPDATE ${tableName}... " />
-            <marker date="1518147781878" expanded="true" signature="1199:1500" ph="UPDATE ${tableName}... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/entity/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="836">
+          <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
           <folding>
+            <element signature="e#376#377#0" expanded="true" />
             <element signature="e#409#410#0" expanded="true" />
             <element signature="e#461#462#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
@@ -1234,52 +1174,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CommonDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="152">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/dao/CustomerDao.java">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="95">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <marker date="1518159570398" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1518159570398" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="90" column="41" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/service/impl/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="61" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="63" />
+        <state relative-caret-position="133">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1326,7 +1293,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
