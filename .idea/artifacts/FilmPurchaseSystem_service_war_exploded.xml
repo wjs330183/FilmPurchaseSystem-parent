@@ -29,6 +29,7 @@
           <element id="archive" name="FilmPurchaseSystem-client-1.0-SNAPSHOT.jar">
             <element id="module-output" name="FilmPurchaseSystem-client" />
           </element>
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.29" />
         </element>
       </element>
       <element id="directory" name="META-INF">

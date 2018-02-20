@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="傻逼米改好了">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_29.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,6 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ClassDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1218#1219#0" expanded="true" />
+                <element signature="e#1274#1275#0" expanded="true" />
+                <element signature="e#1335#1336#0" expanded="true" />
+                <element signature="e#1399#1400#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#1539#1540#0" expanded="true" />
+                <element signature="e#1613#1614#0" expanded="true" />
+                <element signature="e#3312#3320#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -54,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,18 +112,20 @@
       <file leaf-file-name="ClassServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="325">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-context.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spring-context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -93,34 +134,21 @@
       <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/RedisUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="375">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +163,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/RedisUtils.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CustomerDao.java" />
@@ -144,6 +171,8 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" />
       </list>
     </option>
   </component>
@@ -542,8 +571,16 @@
       <updated>1519118665010</updated>
       <workItem from="1519118668420" duration="667000" />
       <workItem from="1519119449723" duration="1137000" />
-      <workItem from="1519120966510" duration="579000" />
+      <workItem from="1519120966510" duration="2647000" />
     </task>
+    <task id="LOCAL-00001" summary="傻逼米改好了">
+      <created>1519121567369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519121567369</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -579,7 +616,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2383000" />
+    <option name="totallyTimeSpent" value="4451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -622,6 +659,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="傻逼米改好了" />
+    <option name="LAST_COMMIT_MESSAGE" value="傻逼米改好了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -673,7 +714,7 @@
         <state relative-caret-position="25">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -769,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -797,22 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -876,16 +893,65 @@
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1539#1540#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#3312#3320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
