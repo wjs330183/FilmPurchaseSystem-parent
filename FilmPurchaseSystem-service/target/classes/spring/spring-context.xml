@@ -37,7 +37,7 @@
 
     <!-- 根据Dao接口生成接口对象 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="dao"/>
+        <property name="basePackage" value="com.ioe.dao"/>
     </bean>
 
 

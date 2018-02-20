@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="FilmPurchaseSystem-client:war">
     <output-path>$PROJECT_DIR$/FilmPurchaseSystem-client/target</output-path>
-    <root id="archive" name="parent.war">
+    <root id="archive" name="FilmPurchaseSystem-client.war">
       <element id="artifact" artifact-name="FilmPurchaseSystem-client:war exploded" />
     </root>
   </artifact>
