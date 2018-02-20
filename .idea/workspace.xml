@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="jsonObject依赖添加">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="批量增加接口创建">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,8 +65,8 @@
       <file leaf-file-name="CommonServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="325">
+              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#936#957#0" expanded="true" />
@@ -587,7 +582,7 @@
       <updated>1519118665010</updated>
       <workItem from="1519118668420" duration="667000" />
       <workItem from="1519119449723" duration="1137000" />
-      <workItem from="1519120966510" duration="4902000" />
+      <workItem from="1519120966510" duration="5142000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -603,7 +598,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519132102872</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="批量增加接口创建">
+      <created>1519134360678</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519134360678</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -639,7 +641,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6706000" />
+    <option name="totallyTimeSpent" value="6946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -686,7 +688,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="傻逼米改好了" />
     <MESSAGE value="jsonObject依赖添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonObject依赖添加" />
+    <MESSAGE value="批量增加接口创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="批量增加接口创建" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1000,8 +1003,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        <state relative-caret-position="325">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#936#957#0" expanded="true" />
