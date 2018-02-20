@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/jiliang/xianke/FilmPurchaseSystem-client/1.0-SNAPSHOT/FilmPurchaseSystem-client-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/jiliang/xianke/FilmPurchaseSystem-client" />
     </SOURCES>
   </library>
 </component>

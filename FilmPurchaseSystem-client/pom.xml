@@ -7,7 +7,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>FilmPurchaseSystem-client</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <name>FilmPurchaseSystem-client Maven Webapp</name>
     <url>http://maven.apache.org</url>
 </project>
