@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="傻逼米改好了">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_29.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" />
+    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="jsonObject依赖添加">
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#848#849#0" expanded="true" />
@@ -59,12 +57,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Customer.java">
+      <file leaf-file-name="CommonService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="150">
+              <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#936#957#0" expanded="true" />
+                <element signature="e#1467#1483#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,19 +84,22 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="96" column="21" lean-forward="false" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+            <state relative-caret-position="595">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="CommonMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="31" column="37" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="125">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="28" />
+              <folding>
+                <marker date="1519118374113" expanded="true" signature="257:473" ph="SELECT group... columns" />
+                <marker date="1519118374113" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,16 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilmPurchaseSystem-service.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,11 +173,13 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CustomerDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -349,6 +356,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -571,7 +587,7 @@
       <updated>1519118665010</updated>
       <workItem from="1519118668420" duration="667000" />
       <workItem from="1519119449723" duration="1137000" />
-      <workItem from="1519120966510" duration="2647000" />
+      <workItem from="1519120966510" duration="4902000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -580,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519121567369</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="jsonObject依赖添加">
+      <created>1519132102872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519132102872</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -616,7 +639,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4451000" />
+    <option name="totallyTimeSpent" value="6706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,7 +685,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="傻逼米改好了" />
-    <option name="LAST_COMMIT_MESSAGE" value="傻逼米改好了" />
+    <MESSAGE value="jsonObject依赖添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="jsonObject依赖添加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -874,14 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="96" column="21" lean-forward="false" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -934,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#848#849#0" expanded="true" />
@@ -951,6 +967,45 @@
             <element signature="e#1539#1540#0" expanded="true" />
             <element signature="e#1613#1614#0" expanded="true" />
             <element signature="e#3312#3320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <marker date="1519118374113" expanded="true" signature="257:473" ph="SELECT group... columns" />
+            <marker date="1519118374113" expanded="true" signature="630:654" ph="INSERT INTO ${tableName}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#936#957#0" expanded="true" />
+            <element signature="e#1467#1483#0" expanded="true" />
           </folding>
         </state>
       </provider>

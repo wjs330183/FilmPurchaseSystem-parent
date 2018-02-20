@@ -13,7 +13,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="FilmPurchaseSystem-client" target="1.5" />
       <module name="FilmPurchaseSystem-parent" target="1.5" />
-      <module name="FilmPurchaseSystem-service" target="1.5" />
+      <module name="FilmPurchaseSystem-service" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
