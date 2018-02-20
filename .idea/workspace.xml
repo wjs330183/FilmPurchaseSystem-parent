@@ -495,7 +495,7 @@
       <workItem from="1519116868598" duration="375000" />
       <workItem from="1519118413462" duration="917000" />
       <workItem from="1519119409339" duration="875000" />
-      <workItem from="1519120380246" duration="12000" />
+      <workItem from="1519120380246" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="建立文件夹">
       <created>1516610599410</created>
@@ -588,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519111168495</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="删除">
+      <created>1519120403757</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1519120403757</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -624,7 +631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30820000" />
+    <option name="totallyTimeSpent" value="30832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -675,7 +682,8 @@
     <MESSAGE value="common.xml/dao" />
     <MESSAGE value="customer创建" />
     <MESSAGE value="增加注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加注释" />
+    <MESSAGE value="删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
