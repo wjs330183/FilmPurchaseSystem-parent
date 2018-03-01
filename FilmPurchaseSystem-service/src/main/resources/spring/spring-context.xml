@@ -41,6 +41,10 @@
     </bean>
 
 
-
-
+    <bean id="customerService"
+          class="com.ioe.service.impl.CustomerServiceImpl"/>
+    <bean id="commonService"
+          class="com.ioe.service.impl.CommonServiceImpl"/>
+    <bean id="classService"
+          class="com.ioe.service.impl.ClassServiceImpl"/>
 </beans>

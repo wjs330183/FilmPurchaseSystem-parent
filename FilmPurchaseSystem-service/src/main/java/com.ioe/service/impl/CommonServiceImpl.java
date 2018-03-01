@@ -6,6 +6,7 @@ import com.ioe.dao.CommonDao;
 import com.ioe.service.CommonService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service("commonService")
 public class CommonServiceImpl<T> implements CommonService<T> {
 
     @Autowired
@@ -30,6 +32,7 @@ public class CommonServiceImpl<T> implements CommonService<T> {
     private void batchCreate(String tableName, String params) {
         List<Map<String, String>> slaveTableDatas = new ArrayList<Map<String, String>>();
         JSONArray jsonArray = JSONArray.parseArray(params);
+        String masterTableColumns = commonDao.getTable(tableName);
         if (StringUtils.isBlank(tableName)) {
             //TODO
         }
@@ -42,7 +45,7 @@ public class CommonServiceImpl<T> implements CommonService<T> {
             }
 
             Map<String, String> masterTableData = new HashMap<String, String>();
-            match(masterTableData, tableName, jsonObject);
+            match(masterTableData, masterTableColumns, jsonObject);
             slaveTableDatas.add(masterTableData);
         }
         commonDao.batchCreateTable(tableName, slaveTableDatas);

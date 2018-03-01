@@ -1,5 +1,6 @@
 package com.ioe.service;
 
 public interface CustomerService {
-    public int createCustomer();
+
+    public int createCustomer(String customerJson);
 }
