@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="批量增加接口创建">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
+    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CustomerService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CustomerService.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/UserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/ClassDAO.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/ClassDAO.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CommonDao.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CommonDao.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CustomerDao.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CustomerDao.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/ClassServiceImpl.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/ClassServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/CustomerServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/utils/RedisUtils.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/utils/RedisUtils.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/UserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/test-classes/NullTest.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/test-classes/NullTest.class" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommonServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommonServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state relative-caret-position="-6">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassServiceImplTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClassServiceImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="645">
+              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-context.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
+      <file leaf-file-name="NullTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state relative-caret-position="575">
+              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -179,7 +161,6 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
@@ -188,6 +169,8 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
       </list>
     </option>
   </component>
@@ -641,7 +624,7 @@
       <workItem from="1519119449723" duration="1137000" />
       <workItem from="1519120966510" duration="5142000" />
       <workItem from="1519134984708" duration="549000" />
-      <workItem from="1519869107442" duration="3269000" />
+      <workItem from="1519869107442" duration="3411000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -664,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519134360678</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="测试完毕">
+      <created>1519872399422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519872399422</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -700,7 +690,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10764000" />
+    <option name="totallyTimeSpent" value="10906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -716,7 +706,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44396082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44396082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -748,7 +738,8 @@
     <MESSAGE value="傻逼米改好了" />
     <MESSAGE value="jsonObject依赖添加" />
     <MESSAGE value="批量增加接口创建" />
-    <option name="LAST_COMMIT_MESSAGE" value="批量增加接口创建" />
+    <MESSAGE value="测试完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试完毕" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1037,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE.jar!/org/springframework/context/config/spring-context-3.2.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1129,16 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1184,8 +1157,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CommonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+        <state relative-caret-position="-6">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -26,7 +26,7 @@ public class ClassServiceImplTest {
     }
     @Test
     @Ignore
-    public void sendNoticeTest()  {
+    public void createClassTest()  {
 
     }
 }

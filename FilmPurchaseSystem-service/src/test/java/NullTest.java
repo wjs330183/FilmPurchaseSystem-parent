@@ -24,7 +24,7 @@ public class NullTest {
     }
     @Test
     @Ignore
-    public void sendNoticeTest()  {
+    public void nullTest()  {
     }
 
 }
