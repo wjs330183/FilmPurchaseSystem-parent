@@ -3,6 +3,8 @@ package com.ioe.service.impl;
 import org.junit.*;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.*;
 
 public class ClassServiceImplTest {
@@ -27,6 +29,6 @@ public class ClassServiceImplTest {
     @Test
     @Ignore
     public void createClassTest()  {
-
+        HashMap hashMap = new HashMap();
     }
 }

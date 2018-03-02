@@ -25,6 +25,11 @@ public class CustomerServiceImpl implements CustomerService {
         commonService.batchCreateTable(tableName, customerList);
         return 0;
     }
+
+    @Override
+    public int updateCustomer(String customerJson) {
+        return 0;
+    }
     /**
      * 用户服务
      */

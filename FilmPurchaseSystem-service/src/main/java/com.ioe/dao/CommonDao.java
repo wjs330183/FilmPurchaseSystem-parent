@@ -13,4 +13,5 @@ public interface CommonDao {
 
     int batchUpdate(@Param("tableName") String tableName, @Param("information") String information, @Param("datas") List<Map<String, String>> datas);
 
+    int batchdelate(@Param("information") String information);
 }
