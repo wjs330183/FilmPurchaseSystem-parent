@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="class调错">
+    <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="文件添加完">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Hall.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Movie.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderHead.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Seat.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/HallService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/MovieService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/SeatService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDAO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/MovieDAO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/SeatDAO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClassMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="95">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,31 +54,56 @@
       <file leaf-file-name="CustomerMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassServiceImplTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Hall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+              <folding>
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassServiceImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="263">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerServiceImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,11 +113,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,12 +152,17 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.fxml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Hall.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Movie.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderDetail.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderHead.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Seat.java" />
       </list>
     </option>
   </component>
@@ -266,16 +320,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com.ioe" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.ioe" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -284,26 +328,7 @@
               <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.ioe" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="configlocal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -322,6 +347,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmPurchaseSystem-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmPurchaseSystem-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FilmPurchaseSystem-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -369,14 +402,14 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.ioe.service.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\FilmPurchaseSystem-parent\FilmPurchaseSystem-service\src\main\java\com.ioe" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\FilmPurchaseSystem-parent\FilmPurchaseSystem-service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\FilmPurchaseSystem-parent\FilmPurchaseSystem-service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\FilmPurchaseSystem-parent\FilmPurchaseSystem-service\src\main\java\com.ioe" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,7 +424,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerServiceImplTest.createCustomerTest">
+  <component name="RunManager" selected="JUnit.ClassServiceImplTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -412,6 +445,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="ClassServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ioe.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FilmPurchaseSystem-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ioe.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ioe.service.impl.ClassServiceImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="CustomerServiceImplTest.createCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -538,16 +596,18 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.NullTest.sendNoticeTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.NullTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerServiceImplTest.createCustomerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ClassServiceImplTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerServiceImplTest.createCustomerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NullTest.sendNoticeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NullTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ClassServiceImplTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerServiceImplTest.createCustomerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NullTest.sendNoticeTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NullTest" />
       </list>
     </recent_temporary>
   </component>
@@ -572,7 +632,7 @@
       <workItem from="1519960406418" duration="496000" />
       <workItem from="1520513024984" duration="1184000" />
       <workItem from="1522216965418" duration="31000" />
-      <workItem from="1523157418562" duration="10138000" />
+      <workItem from="1523157418562" duration="20867000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -616,21 +676,19 @@
       <option name="project" value="LOCAL" />
       <updated>1523174158005</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="class调错">
+      <created>1523174561243</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523174561243</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 42m 06s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 44m 11s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 45m 42s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.06 at 10h 52m 15s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    <history-entry file="ClassServiceImplTest - 2018.04.08 at 16h 49m 51s.xml">
+      <configuration name="ClassServiceImplTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.06 at 10h 58m 22s.xml">
       <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
@@ -650,9 +708,18 @@
     <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 15h 59m 27s.xml">
       <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 16h 39m 25s.xml">
+      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 16h 39m 59s.xml">
+      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 16h 46m 42s.xml">
+      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27217000" />
+    <option name="totallyTimeSpent" value="37946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -660,15 +727,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38322368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38322368" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23519737" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48355263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.078947365" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -681,7 +748,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -705,171 +772,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="class调错" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="12" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <marker date="1523174117799" expanded="true" signature="265:481" ph="SELECT group... columns" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <marker date="1523174117799" expanded="true" signature="265:481" ph="SELECT group... columns" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding>
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#936#937#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/FilmPurchaseSystem-client.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="33" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -939,14 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1020,34 +916,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/configlocal/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/configlocal/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -1070,6 +942,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-parent.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/configlocal/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/HallService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/MovieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/SeatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/MovieDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/SeatDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="48" column="57" lean-forward="true" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="44" column="53" lean-forward="true" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="62" column="56" lean-forward="true" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
+          <folding>
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1078,29 +1140,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1260#1261#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderHead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="50" column="59" lean-forward="true" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Seat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Hall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="263">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -13,6 +13,16 @@ public class Class {
      * 等级折扣
      */
     private double classDiscount;
+    /**
+    是否删除
+     */
+    private int classdisabled;
+
+    /**
+     *
+     * 是否使用
+     */
+    private String classIsActive;
 
     public String getClassId() {
         return classId;
@@ -36,5 +46,21 @@ public class Class {
 
     public void setClassDiscount(double classDiscount) {
         this.classDiscount = classDiscount;
+    }
+
+    public int getClassdisabled() {
+        return classdisabled;
+    }
+
+    public void setClassdisabled(int classdisabled) {
+        this.classdisabled = classdisabled;
+    }
+
+    public String getClassIsActive() {
+        return classIsActive;
+    }
+
+    public void setClassIsActive(String classIsActive) {
+        this.classIsActive = classIsActive;
     }
 }

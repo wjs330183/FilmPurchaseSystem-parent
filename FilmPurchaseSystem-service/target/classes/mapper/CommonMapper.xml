@@ -35,10 +35,11 @@
             WHERE disabled=1 AND information=
             <foreach collection="singleData" index="index2" item="columm2" open="" separator=","
                      close="">
+                <if test="index2 == 'information'">
                     #{columm2}
                 </if>
             </foreach>
-            <if test="index2 == 'information'">
+
         </foreach>
     </update>
 
