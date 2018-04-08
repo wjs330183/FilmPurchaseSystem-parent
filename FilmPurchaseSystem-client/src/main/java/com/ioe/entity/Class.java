@@ -12,7 +12,7 @@ public class Class {
     /**
      * 等级折扣
      */
-    private String classDiscount;
+    private double classDiscount;
 
     public String getClassId() {
         return classId;
@@ -30,11 +30,11 @@ public class Class {
         this.className = className;
     }
 
-    public String getClassDiscount() {
+    public double getClassDiscount() {
         return classDiscount;
     }
 
-    public void setClassDiscount(String classDiscount) {
+    public void setClassDiscount(double classDiscount) {
         this.classDiscount = classDiscount;
     }
 }

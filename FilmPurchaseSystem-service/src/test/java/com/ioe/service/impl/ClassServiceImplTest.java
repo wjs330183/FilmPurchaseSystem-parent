@@ -1,5 +1,8 @@
 package com.ioe.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
+import com.ioe.entity.Class;
+import com.ioe.service.ClassService;
 import org.junit.*;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,6 +12,8 @@ import static org.junit.Assert.*;
 
 public class ClassServiceImplTest {
     private ClassPathXmlApplicationContext context;
+
+    private ClassService classService;
 
     @BeforeClass
     public static void setUpBeforeClass()  {
@@ -21,6 +26,7 @@ public class ClassServiceImplTest {
     @Before
     public void setUp() {
         context = new ClassPathXmlApplicationContext(new String[] {"spring/spring-*.xml"});
+        classService = (ClassServiceImpl) context.getBean(ClassServiceImpl.class);
     }
 
     @After
@@ -29,6 +35,11 @@ public class ClassServiceImplTest {
     @Test
     @Ignore
     public void createClassTest()  {
-        HashMap hashMap = new HashMap();
+        Class aClass = new Class();
+        aClass.setClassId("11");
+        aClass.setClassName("黄金会员");
+        aClass.setClassDiscount(0.8);
+        String classJson = JSONObject.toJSONString(aClass);
+        classService.createClass(classJson);
     }
 }
