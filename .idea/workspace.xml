@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="class调错">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_29.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_29.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_1_RELEASE.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CommonDao.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/dao/CommonDao.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/ClassServiceImpl.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/ClassServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/com/ioe/service/impl/CustomerServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/mapper/CommonMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/test-classes/NullTest.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/test-classes/NullTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,13 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
+      <file leaf-file-name="ClassServiceImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="99">
+              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerServiceImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
               <folding>
-                <marker date="1523174117799" expanded="true" signature="265:481" ph="SELECT group... columns" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,12 +103,12 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.fxml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
       </list>
     </option>
   </component>
@@ -597,7 +572,7 @@
       <workItem from="1519960406418" duration="496000" />
       <workItem from="1520513024984" duration="1184000" />
       <workItem from="1522216965418" duration="31000" />
-      <workItem from="1523157418562" duration="9720000" />
+      <workItem from="1523157418562" duration="10138000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -634,16 +609,17 @@
       <option name="project" value="LOCAL" />
       <updated>1519872526346</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="class调错">
+      <created>1523174158005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523174158005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 31m 15s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 39m 03s.xml">
-      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.03.01 at 10h 42m 06s.xml">
       <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
     </history-entry>
@@ -668,9 +644,15 @@
     <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 15h 36m 20s.xml">
       <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 15h 56m 19s.xml">
+      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerServiceImplTest_createCustomerTest - 2018.04.08 at 15h 59m 27s.xml">
+      <configuration name="CustomerServiceImplTest.createCustomerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26799000" />
+    <option name="totallyTimeSpent" value="27217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -678,7 +660,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38322368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38322368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -686,7 +668,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48355263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48355263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1019,14 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml.tld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1051,16 +1025,6 @@
         <state relative-caret-position="152">
           <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,6 +1060,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <marker date="1523174117799" expanded="true" signature="265:481" ph="SELECT group... columns" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1112,12 +1086,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CommonMapper.xml">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="99">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
           <folding>
-            <marker date="1523174117799" expanded="true" signature="265:481" ph="SELECT group... columns" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
