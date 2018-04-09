@@ -1,4 +1,4 @@
 package com.ioe.dao;
 
-public interface CustomerDao {
+public interface CustomerDao extends CommonDao {
 }
