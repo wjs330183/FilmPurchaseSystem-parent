@@ -16,13 +16,12 @@ public class Class {
     /**
     是否删除
      */
-    private int classdisabled;
-
+    /*private int classdisabled;*/
     /**
      *
      * 是否使用
      */
-    private String classIsActive;
+   /* private int classIsActive;*/
 
     public String getClassId() {
         return classId;
@@ -48,7 +47,7 @@ public class Class {
         this.classDiscount = classDiscount;
     }
 
-    public int getClassdisabled() {
+    /*public int getClassdisabled() {
         return classdisabled;
     }
 
@@ -56,11 +55,9 @@ public class Class {
         this.classdisabled = classdisabled;
     }
 
-    public String getClassIsActive() {
+    public int getClassIsActive() {
         return classIsActive;
     }
 
-    public void setClassIsActive(String classIsActive) {
-        this.classIsActive = classIsActive;
-    }
+    public void setClassIsActive(int classIsActive) { this.classIsActive = classIsActive; }*/
 }

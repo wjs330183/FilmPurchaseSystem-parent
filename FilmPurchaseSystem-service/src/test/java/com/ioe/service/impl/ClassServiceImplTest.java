@@ -39,8 +39,6 @@ public class ClassServiceImplTest {
         aClass.setClassId("11");
         aClass.setClassName("黄金会员");
         aClass.setClassDiscount(0.8);
-        aClass.setClassIsActive("使用");
-        aClass.setClassdisabled(0);
         String classJson = JSONObject.toJSONString(aClass);
         classService.createClass(classJson);
     }
