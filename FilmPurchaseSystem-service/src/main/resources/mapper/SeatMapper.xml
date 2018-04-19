@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.ioe.dao.t_cjlu_seatDao">
+
+    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_seatEntity">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="seatId" column="seat_id" jdbcType="VARCHAR"/>
+        <result property="hallId" column="hall_id" jdbcType="VARCHAR"/>
+        <result property="seatRow" column="seat_row" jdbcType="INT"/>
+        <result property="seatColumn" column="seat_column" jdbcType="INT"/>
+        <result property="seatIsactive" column="seat_isactive" jdbcType="VARCHAR"/>
+        <result property="sysCreateTime" column="sys_create_time" jdbcType="TIMESTAMP"/>
+        <result property="sysCreator" column="sys_creator" jdbcType="VARCHAR"/>
+        <result property="sysUpdateTime" column="sys_update_time" jdbcType="TIMESTAMP"/>
+        <result property="sysUpdater" column="sys_updater" jdbcType="VARCHAR"/>
+        <result property="sysDeleted" column="sys_deleted" jdbcType="TINYINT"/>
+        <result property="sysHash" column="sys_hash" jdbcType="VARCHAR"/>
+        <result property="sysAvailData" column="sys_avail_data" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="tableName">t_cjlu_seat</sql>
+    <sql id="columns">
+        id,
+        seat_id,
+        hall_id,
+        seat_row,
+        seat_column,
+        seat_isactive,
+        sys_create_time,
+        sys_creator,
+        sys_update_time,
+        sys_updater,
+        sys_deleted,
+        sys_hash,
+        sys_avail_data
+    </sql>
+
+    <!-- single entity save -->
+    <insert id="save">
+        insert into
+        <include refid="tableName"/>
+        (<include refid="columns"/>) values
+        (
+            #{entity.id},
+            #{entity.seatId},
+            #{entity.hallId},
+            #{entity.seatRow},
+            #{entity.seatColumn},
+            #{entity.seatIsactive},
+            #{entity.sysCreateTime},
+            #{entity.sysCreator},
+            #{entity.sysUpdateTime},
+            #{entity.sysUpdater},
+            #{entity.sysDeleted},
+            #{entity.sysHash},
+            #{entity.sysAvailData}
+        )
+    </insert>
+
+    <!-- mutipule entity save -->
+    <insert id="insertBatch">
+        insert into
+        <include refid="tableName"/>
+        (<include refid="columns"/>) values
+        <foreach collection="entities" open="(" close=")" item="entity" separator=",">
+        (
+            #{entity.id},
+            #{entity.seatId},
+            #{entity.hallId},
+            #{entity.seatRow},
+            #{entity.seatColumn},
+            #{entity.seatIsactive},
+            #{entity.sysCreateTime},
+            #{entity.sysCreator},
+            #{entity.sysUpdateTime},
+            #{entity.sysUpdater},
+            #{entity.sysDeleted},
+            #{entity.sysHash},
+            #{entity.sysAvailData}
+        )
+        </foreach>
+    </insert>
+
+    <!-- get entity by id -->
+    <select id="getById" resultMap="resultMap">
+        select <include refid="columns"/>
+        from <include refid="tableName"/>
+        where id = #{id}
+        and sys_deleted=0 and sys_avail_data=#{availData}
+    </select>
+
+    <update id="deleteById">
+        update <include refid="tableName"/>
+        set sys_deleted=1, sys_updater=#{operator}
+        where id=#{id}
+        and sys_deleted!=1
+    </update>
+
+
+<!-- update entity -->
+    <update id="update" parameterType="com.ioe.entity.Seat">
+        update
+        <include refid="tableName"/>
+        set
+            seat_id = #{entity.seatId},
+            hall_id = #{entity.hallId},
+            seat_row = #{entity.seatRow},
+            seat_column = #{entity.seatColumn},
+            seat_isactive = #{entity.seatIsactive},
+            sys_create_time = #{entity.sysCreateTime},
+            sys_creator = #{entity.sysCreator},
+            sys_update_time = #{entity.sysUpdateTime},
+            sys_updater = #{entity.sysUpdater},
+            sys_deleted = #{entity.sysDeleted},
+            sys_hash = #{entity.sysHash},
+            sys_avail_data = #{entity.sysAvailData}
+        where  and sys_deleted!=1
+    </update>
+
+    <select id="getBySeatId" resultMap="resultMap">
+        select <include refid="columns"/>
+        from <include refid="tableName"/>
+        where 1=1
+        and sys_deleted=0 and sys_avail_data=#{availData}
+        <if test="seatId!=null">
+            and seat_id=#{seatId}
+        </if>
+    </select>
+</mapper>
