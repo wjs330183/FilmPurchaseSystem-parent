@@ -37,9 +37,10 @@ public class CustomerServiceImplTest {
         Customer customer = new Customer();
         customer.setClassId("12");
         customer.setCustomerEmail("dfsbjkl@163.com");
-        customer.setCustomerId("123123");
+        customer.setCustomerId("123111");
         customer.setCustomerMobile("12343567865");
         customer.setCustomerName("mimi");
+
         String customerJson = JSONObject.toJSONString(customer);
         customerService.createCustomer(customerJson);
     }

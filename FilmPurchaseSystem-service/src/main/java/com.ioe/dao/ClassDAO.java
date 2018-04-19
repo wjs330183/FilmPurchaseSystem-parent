@@ -2,7 +2,7 @@ package com.ioe.dao;
 
 import java.util.List;
 
-public interface ClassDAO {
+public interface ClassDAO extends CommonDao {
     /**
      * 等级的DAO
      */

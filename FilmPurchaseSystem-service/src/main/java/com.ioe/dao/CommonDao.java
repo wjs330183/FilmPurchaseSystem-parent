@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
 
-public interface CommonDao {
+public interface CommonDao<T> {
 
     String getTable(@Param("tableName") String tableName);
 

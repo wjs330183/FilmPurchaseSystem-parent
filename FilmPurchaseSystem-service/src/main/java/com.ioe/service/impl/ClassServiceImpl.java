@@ -1,6 +1,7 @@
 package com.ioe.service.impl;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.ioe.entity.Class;
 import com.ioe.service.ClassService;
 import com.ioe.service.CommonService;
@@ -16,15 +17,22 @@ import java.util.List;
 public class ClassServiceImpl implements ClassService {
 
     @Autowired
-    private CommonService commonService;
+    private CommonService classService;
+    private String tableName = "t_class";
 
     /**
      * 等级
      */
     @Transactional
-    public void createClass(String json) {
-        String tableName = "t_class";
-        List<Class> classList = CommonUtils.getListByJson(json, Class.class);
-        commonService.batchCreateTable(tableName, classList);
+    @Override
+    public int createClass(String classJson) {
+
+        List<Class> classList = CommonUtils.getListByJson(classJson, Class.class);
+        classService.batchCreateTable(tableName, classList);
+        return 0;
+    }
+
+    public int updateClass(String classJson) {
+        return 0;
     }
 }
