@@ -1,63 +1,54 @@
 package com.ioe.entity;
 
-import java.util.*;
-import java.math.BigDecimal;
+import java.sql.Date;
 
-/**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
-public class Orderhead extends BaseEntity {
-
+public class OrderHead {
     /**
-    *
-    */
-    private String id;
-
+     * 订单ID
+     */
+    private String orderHeadID;
     /**
-    *订单ID
-    */
-    private String orderheadId;
-
+     * 下单时间
+     */
+    private Date orderHeadBuyDate;
     /**
-    *下单时间
-    */
-    private Date orderheadBuydate;
-
+     * 用户ID
+     */
+    private String customerID;
     /**
-    *用户ID
-    */
-    private String customerId;
+     * 是否删除
+     */
+    private int orderHeadDisable;
 
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-    public String getOrderheadId() {
-        return this.orderheadId;
+    public String getOrderHeadID() {
+        return orderHeadID;
     }
 
-    public void setOrderheadId(String orderheadId) {
-        this.orderheadId = orderheadId;
-    }
-    public Date getOrderheadBuydate() {
-        return this.orderheadBuydate;
+    public void setOrderHeadID(String orderHeadID) {
+        this.orderHeadID = orderHeadID;
     }
 
-    public void setOrderheadBuydate(Date orderheadBuydate) {
-        this.orderheadBuydate = orderheadBuydate;
-    }
-    public String getCustomerId() {
-        return this.customerId;
+    public Date getOrderHeadBuyDate() {
+        return orderHeadBuyDate;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+    public void setOrderHeadBuyDate(Date orderHeadBuyDate) {
+        this.orderHeadBuyDate = orderHeadBuyDate;
     }
 
+    public String getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(String customerID) {
+        this.customerID = customerID;
+    }
+
+    public int getOrderHeadDisable() {
+        return orderHeadDisable;
+    }
+
+    public void setOrderHeadDisable(int orderHeadDisable) {
+        this.orderHeadDisable = orderHeadDisable;
+    }
 }

@@ -1,13 +1,32 @@
 package com.ioe.dao;
 
-import java.util.List;
+import com.ioe.entity.Class;
 
-public interface ClassDAO extends CommonDao {
+import org.apache.ibatis.annotations.Param;
+import java.util.*;
+
+/**
+* 描述：
+* @author wangjs
+* @date 2018-04-19
+*/
+public interface ClassDao {
+
+    int save(@Param("entity")Class entity);
+
+    int saveBatch(@Param("entities")List<Class> entities);
+
+    int update(@Param("entity")Class entity);
+
+    List<Class> getById (@Param("id")String id, @Param("availData")int availData);
+
+    int deleteById (String id, @Param("operator")String operator);
+
+
+
     /**
-     * 等级的DAO
-     */
-    public String createClass(Class aclass);//创建
-    public List<Class> selectClassBySomething();//查找
-    public List<Class> loadALL();//load
-    public String deleteClass();//删除
+    * index:t_cjlu_class ==> Class_ID_UNIQUE
+    */
+    List<Class> getByClassId (String classId, @Param("availData")int availData);
+
 }

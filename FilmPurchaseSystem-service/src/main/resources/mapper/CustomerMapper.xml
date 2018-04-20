@@ -1,12 +1,130 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="com.ioe.dao.CustomerDao">
-    <resultMap id="resultMap" type="com.ioe.entity.Customer">
-        <result column="customer_id" property="customerId" jdbcType="VARCHAR"/>
-        <result column="customer_name" property="customerName" jdbcType="VARCHAR"/>
-        <result column="customer_email" property="customerEmail" jdbcType="INTEGER"/>
-        <result column="customer_mobile" property="customerMobile" jdbcType="VARCHAR"/>
-        <result column="class_id" property="classId" jdbcType="VARCHAR"/>
+<mapper namespace="com.ioe.dao.t_cjlu_customerDao">
+
+    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_customerEntity">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="customerId" column="customer_id" jdbcType="VARCHAR"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="customerEmail" column="customer_email" jdbcType="VARCHAR"/>
+        <result property="customerMobile" column="customer_mobile" jdbcType="VARCHAR"/>
+        <result property="classId" column="class_id" jdbcType="VARCHAR"/>
+        <result property="sysCreateTime" column="sys_create_time" jdbcType="TIMESTAMP"/>
+        <result property="sysCreator" column="sys_creator" jdbcType="VARCHAR"/>
+        <result property="sysUpdateTime" column="sys_update_time" jdbcType="TIMESTAMP"/>
+        <result property="sysUpdater" column="sys_updater" jdbcType="VARCHAR"/>
+        <result property="sysDeleted" column="sys_deleted" jdbcType="TINYINT"/>
+        <result property="sysHash" column="sys_hash" jdbcType="VARCHAR"/>
+        <result property="sysAvailData" column="sys_avail_data" jdbcType="TINYINT"/>
     </resultMap>
+
+    <sql id="tableName">t_cjlu_customer</sql>
+    <sql id="columns">
+        id,
+        customer_id,
+        customer_name,
+        customer_email,
+        customer_mobile,
+        class_id,
+        sys_create_time,
+        sys_creator,
+        sys_update_time,
+        sys_updater,
+        sys_deleted,
+        sys_hash,
+        sys_avail_data
+    </sql>
+
+    <!-- single entity save -->
+    <insert id="save">
+        insert into
+        <include refid="tableName"/>
+        (<include refid="columns"/>) values
+        (
+            #{entity.id},
+            #{entity.customerId},
+            #{entity.customerName},
+            #{entity.customerEmail},
+            #{entity.customerMobile},
+            #{entity.classId},
+            #{entity.sysCreateTime},
+            #{entity.sysCreator},
+            #{entity.sysUpdateTime},
+            #{entity.sysUpdater},
+            #{entity.sysDeleted},
+            #{entity.sysHash},
+            #{entity.sysAvailData}
+        )
+    </insert>
+
+    <!-- mutipule entity save -->
+    <insert id="insertBatch">
+        insert into
+        <include refid="tableName"/>
+        (<include refid="columns"/>) values
+        <foreach collection="entities" open="(" close=")" item="entity" separator=",">
+        (
+            #{entity.id},
+            #{entity.customerId},
+            #{entity.customerName},
+            #{entity.customerEmail},
+            #{entity.customerMobile},
+            #{entity.classId},
+            #{entity.sysCreateTime},
+            #{entity.sysCreator},
+            #{entity.sysUpdateTime},
+            #{entity.sysUpdater},
+            #{entity.sysDeleted},
+            #{entity.sysHash},
+            #{entity.sysAvailData}
+        )
+        </foreach>
+    </insert>
+
+    <!-- get entity by id -->
+    <select id="getById" resultMap="resultMap">
+        select <include refid="columns"/>
+        from <include refid="tableName"/>
+        where id = #{id}
+        and sys_deleted=0 and sys_avail_data=#{availData}
+    </select>
+
+    <update id="deleteById">
+        update <include refid="tableName"/>
+        set sys_deleted=1, sys_updater=#{operator}
+        where id=#{id}
+        and sys_deleted!=1
+    </update>
+
+
+<!-- update entity -->
+    <update id="update" parameterType="com.ioe.entity.Customer">
+        update
+        <include refid="tableName"/>
+        set
+            customer_id = #{entity.customerId},
+            customer_name = #{entity.customerName},
+            customer_email = #{entity.customerEmail},
+            customer_mobile = #{entity.customerMobile},
+            class_id = #{entity.classId},
+            sys_create_time = #{entity.sysCreateTime},
+            sys_creator = #{entity.sysCreator},
+            sys_update_time = #{entity.sysUpdateTime},
+            sys_updater = #{entity.sysUpdater},
+            sys_deleted = #{entity.sysDeleted},
+            sys_hash = #{entity.sysHash},
+            sys_avail_data = #{entity.sysAvailData}
+        where  and sys_deleted!=1
+    </update>
+
+    <select id="getByCustomerId" resultMap="resultMap">
+        select <include refid="columns"/>
+        from <include refid="tableName"/>
+        where 1=1
+        and sys_deleted=0 and sys_avail_data=#{availData}
+        <if test="customerId!=null">
+            and customer_id=#{customerId}
+        </if>
+    </select>
 </mapper>
