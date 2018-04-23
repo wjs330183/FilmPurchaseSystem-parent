@@ -23,9 +23,9 @@ import com.ioe.service.Orderseat;
 * @date 2018-04-19
 */
 @Service("orderseatService")
-public class OrderseatServiceImpl implements OrderseatService {
+public class OrderSeatServiceImpl implements OrderseatService {
 
-    private static Logger logger = LoggerFactory.getLogger(OrderseatServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(OrderSeatServiceImpl.class);
 
     @Resource
     private OrderseatDao orderseatDao;

@@ -1,5 +1,6 @@
 package com.ioe.service.impl;
 
+import com.ioe.service.OrderHeadService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -10,10 +11,9 @@ import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
 import com.ioe.common.domain.PageResult;
 import java.util.*;
-import java.math.BigDecimal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Orderhead;
 import com.ioe.service.Orderhead;
@@ -24,9 +24,9 @@ import com.ioe.service.Orderhead;
 * @date 2018-04-19
 */
 @Service("orderheadService")
-public class OrderheadServiceImpl implements OrderheadService {
+public class OrderHeadServiceImpl implements OrderHeadService {
 
-    private static Logger logger = LoggerFactory.getLogger(OrderheadServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(OrderHeadServiceImpl.class);
 
     @Resource
     private OrderheadDao orderheadDao;

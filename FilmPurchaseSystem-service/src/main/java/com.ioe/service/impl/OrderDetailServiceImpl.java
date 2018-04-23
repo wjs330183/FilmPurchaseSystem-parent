@@ -13,7 +13,6 @@ import java.util.*;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Orderdetail;
 import com.ioe.service.Orderdetail;
@@ -24,9 +23,9 @@ import com.ioe.service.Orderdetail;
 * @date 2018-04-19
 */
 @Service("orderdetailService")
-public class OrderdetailServiceImpl implements OrderdetailService {
+public class OrderDetailServiceImpl implements OrderdetailService {
 
-    private static Logger logger = LoggerFactory.getLogger(OrderdetailServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(OrderDetailServiceImpl.class);
 
     @Resource
     private OrderdetailDao orderdetailDao;

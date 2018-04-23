@@ -1,6 +1,6 @@
 package com.ioe.entity;
 
-public class Customer {
+public class Customer extends BaseEntity{
     /**
      * 用户ID
      */

@@ -1,47 +1,47 @@
 package com.ioe.entity;
 
-public class OrderDetail {
+public class OrderDetail extends BaseEntity{
     /**
      * 订单明细ID
      */
-    private String orderdetailID;
+    private String orderDetailId;
     /**
      * 订单ID
      */
-    private String orderHeadID;
+    private String orderHeadId;
     /**
      * 电影时间表
      */
-    private String scheduleID;
+    private String scheduleId;
     /**
      * 打折后价格
      */
     private double orderdetailAdjustedPrice;
 
 
-    public String getOrderHeadID() {
-        return orderHeadID;
+    public String getOrderHeadId() {
+        return orderHeadId;
     }
 
-    public void setOrderHeadID(String orderHeadID) {
-        this.orderHeadID = orderHeadID;
+    public void setOrderHeadId(String orderHeadId) {
+        this.orderHeadId = orderHeadId;
     }
 
-    public String getOrderdetailID() {
+    public String getOrderDetailId() {
 
-        return orderdetailID;
+        return orderDetailId;
     }
 
-    public void setOrderdetailID(String orderdetailID) {
-        this.orderdetailID = orderdetailID;
+    public void setOrderDetailId(String orderDetailId) {
+        this.orderDetailId = orderDetailId;
     }
 
-    public String getScheduleID() {
-        return scheduleID;
+    public String getScheduleId() {
+        return scheduleId;
     }
 
-    public void setScheduleID(String scheduleID) {
-        this.scheduleID = scheduleID;
+    public void setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
     }
 
     public double getOrderdetailAdjustedPrice() {

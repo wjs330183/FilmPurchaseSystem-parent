@@ -2,11 +2,11 @@ package com.ioe.entity;
 
 import java.sql.Date;
 
-public class OrderHead {
+public class OrderHead extends BaseEntity{
     /**
      * 订单ID
      */
-    private String orderHeadID;
+    private String orderHeadId;
     /**
      * 下单时间
      */
@@ -14,18 +14,15 @@ public class OrderHead {
     /**
      * 用户ID
      */
-    private String customerID;
-    /**
-     * 是否删除
-     */
-    private int orderHeadDisable;
+    private String customerId;
 
-    public String getOrderHeadID() {
-        return orderHeadID;
+
+    public String getOrderHeadId() {
+        return orderHeadId;
     }
 
-    public void setOrderHeadID(String orderHeadID) {
-        this.orderHeadID = orderHeadID;
+    public void setOrderHeadId(String orderHeadId) {
+        this.orderHeadId = orderHeadId;
     }
 
     public Date getOrderHeadBuyDate() {
@@ -36,19 +33,12 @@ public class OrderHead {
         this.orderHeadBuyDate = orderHeadBuyDate;
     }
 
-    public String getCustomerID() {
-        return customerID;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
-    public int getOrderHeadDisable() {
-        return orderHeadDisable;
-    }
-
-    public void setOrderHeadDisable(int orderHeadDisable) {
-        this.orderHeadDisable = orderHeadDisable;
-    }
 }

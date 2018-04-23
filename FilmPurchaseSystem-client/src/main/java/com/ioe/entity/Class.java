@@ -1,6 +1,6 @@
 package com.ioe.entity;
 
-public class Class {
+public class Class extends BaseEntity{
     /**
      * 等级ID
      */
@@ -13,15 +13,6 @@ public class Class {
      * 等级折扣
      */
     private double classDiscount;
-    /**
-    是否删除
-     */
-    /*private int classdisabled;*/
-    /**
-     *
-     * 是否使用
-     */
-   /* private int classIsActive;*/
 
     public String getClassId() {
         return classId;
@@ -47,17 +38,4 @@ public class Class {
         this.classDiscount = classDiscount;
     }
 
-    /*public int getClassdisabled() {
-        return classdisabled;
-    }
-
-    public void setClassdisabled(int classdisabled) {
-        this.classdisabled = classdisabled;
-    }
-
-    public int getClassIsActive() {
-        return classIsActive;
-    }
-
-    public void setClassIsActive(int classIsActive) { this.classIsActive = classIsActive; }*/
 }

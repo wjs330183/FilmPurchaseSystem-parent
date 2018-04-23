@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 * @author wangjs
 * @date 2018-04-19
 */
-public class OrderSeat extends BaseEntity {
+public class OrderSeat extends BaseEntity{
 
     /**
     *
@@ -18,7 +18,7 @@ public class OrderSeat extends BaseEntity {
     /**
     *订单明细ID
     */
-    private String orderdetailId;
+    private String orderDetailId;
 
     /**
     *预定座位ID
@@ -33,12 +33,12 @@ public class OrderSeat extends BaseEntity {
     public void setId(String id) {
         this.id = id;
     }
-    public String getOrderdetailId() {
-        return this.orderdetailId;
+    public String getOrderDetailId() {
+        return this.orderDetailId;
     }
 
-    public void setOrderdetailId(String orderdetailId) {
-        this.orderdetailId = orderdetailId;
+    public void setOrderDetailId(String orderDetailId) {
+        this.orderDetailId = orderDetailId;
     }
     public String getSeatId() {
         return this.seatId;
