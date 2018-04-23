@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 * @author wangjs
 * @date 2018-04-19
 */
-public interface OrderheadService {
+public interface OrderHeadService {
 
 
     /**

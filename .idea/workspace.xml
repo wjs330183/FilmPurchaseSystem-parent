@@ -3,11 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDAO.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/MovieDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/MovieDAO.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Orderseat.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderSeat.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderdetailService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderDetailService.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderheadService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderHeadService.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderseatService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/OrderSeatService.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/SeatDAO.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/SeatDAO.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderseatDao.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderseatDao.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderseatServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderseatServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderseatMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderseatMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,21 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderseatMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderseatMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding>
-                <marker date="1524144861220" expanded="true" signature="1462:1909" ph="insert into " />
-                <marker date="1524144861220" expanded="true" signature="2652:2810" ph="select from where" />
-                <marker date="1524144861220" expanded="true" signature="2863:2999" ph="update set s... set" />
-                <marker date="1524144861220" expanded="true" signature="3113:3644" ph="update set o... set" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,8 +57,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDao.java">
+      <file leaf-file-name="ClassDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
@@ -80,8 +70,8 @@
       <file leaf-file-name="HallDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="682">
+              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -97,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderdetailDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderdetailDao.java">
+      <file leaf-file-name="OrderDetailDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,11 +107,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderheadDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderheadDao.java">
+      <file leaf-file-name="OrderHeadDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="308">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderSeat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderSeat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -180,6 +180,9 @@
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/enums/IDPrefixAuthority.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/a.java" />
         <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/IDGenerator.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Orderseat.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderSeat.java" />
+        <option value="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java" />
       </list>
     </option>
   </component>
@@ -219,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -402,6 +404,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -411,7 +414,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_opened_file_path" value="E:/autocode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -655,6 +658,7 @@
       <workItem from="1524190639108" duration="89000" />
       <workItem from="1524191437730" duration="399000" />
       <workItem from="1524468449250" duration="128000" />
+      <workItem from="1524469228078" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="傻逼米改好了">
       <created>1519121567369</created>
@@ -755,7 +759,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17931000" />
+    <option name="totallyTimeSpent" value="18220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -775,9 +779,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21908316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22121535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -791,7 +796,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264418" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -816,7 +820,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/CommonService.java" />
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -987,12 +990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <marker date="1524144861163" expanded="true" signature="1547:2029" ph="insert into " />
-            <marker date="1524144861163" expanded="true" signature="2807:2965" ph="select from where" />
-            <marker date="1524144861163" expanded="true" signature="3018:3154" ph="update set s... set" />
-            <marker date="1524144861163" expanded="true" signature="3263:3844" ph="update set h... set" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,12 +1023,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <marker date="1524144861220" expanded="true" signature="1462:1909" ph="insert into " />
-            <marker date="1524144861220" expanded="true" signature="2652:2810" ph="select from where" />
-            <marker date="1524144861220" expanded="true" signature="2863:2999" ph="update set s... set" />
-            <marker date="1524144861220" expanded="true" signature="3113:3644" ph="update set o... set" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,7 +1059,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDao.java">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
@@ -1076,8 +1069,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/HallDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="682">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1090,18 +1083,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderdetailDao.java">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderDetailDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderheadDao.java">
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderSeat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="66">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/OrderHeadDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

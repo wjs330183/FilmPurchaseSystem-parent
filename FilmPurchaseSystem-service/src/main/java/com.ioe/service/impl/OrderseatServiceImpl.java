@@ -10,12 +10,11 @@ import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
 import com.ioe.common.domain.PageResult;
 import java.util.*;
-import java.math.BigDecimal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
-import com.ioe.entity.Orderseat;
+import com.ioe.entity.OrderSeat;
 import com.ioe.service.Orderseat;
 
 /**
@@ -50,18 +49,18 @@ public class OrderseatServiceImpl implements OrderseatService {
         }
         try{
             // TODO : 前置代码
-            Orderseat orderseat = new Orderseat();
-            orderseat.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
-            orderseat.setOrderdetailId(orderdetailId);
-            orderseat.setSeatId(seatId);
-            orderseat.setSysCreateTime(sysCreateTime);
-            orderseat.setSysCreator(sysCreator);
-            orderseat.setSysUpdateTime(sysUpdateTime);
-            orderseat.setSysUpdater(sysUpdater);
-            orderseat.setSysDeleted(sysDeleted);
-            orderseat.setSysHash(sysHash);
-            orderseat.setSysAvailData(sysAvailData);
-            orderseatDao.save(orderseat);
+            OrderSeat orderSeat = new OrderSeat();
+            orderSeat.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            orderSeat.setOrderdetailId(orderdetailId);
+            orderSeat.setSeatId(seatId);
+            orderSeat.setSysCreateTime(sysCreateTime);
+            orderSeat.setSysCreator(sysCreator);
+            orderSeat.setSysUpdateTime(sysUpdateTime);
+            orderSeat.setSysUpdater(sysUpdater);
+            orderSeat.setSysDeleted(sysDeleted);
+            orderSeat.setSysHash(sysHash);
+            orderSeat.setSysAvailData(sysAvailData);
+            orderseatDao.save(orderSeat);
             // TODO : 后置代码
         } catch (Exception e){
             logger.error("saveOrderseat error:{}", e.getMessage());
@@ -85,16 +84,16 @@ public class OrderseatServiceImpl implements OrderseatService {
             return result;
         }
         try{
-            List<Orderseat> orderseatList = CommonUtils.getListByJson(orderseatJson, Orderseat.class);
+            List<OrderSeat> orderSeatList = CommonUtils.getListByJson(orderseatJson, OrderSeat.class);
 
-            if (CommonUtils.isEmpty(orderseatList)) {
+            if (CommonUtils.isEmpty(orderSeatList)) {
                 result.setCode("1");
                 result.setMessage("1");
                 return result;
             }
 
             // TODO : 前置代码
-            orderseatDao.saveBatch(orderseatList);
+            orderseatDao.saveBatch(orderSeatList);
             result.setData(True);
 
             // TODO : 后置代码
@@ -112,8 +111,8 @@ public class OrderseatServiceImpl implements OrderseatService {
     */
     @Override
     @Stat
-    public ListResult<Orderseat> getOrderseatById (String id, int availData){
-        ListResult<Orderseat> result = new ListResult();
+    public ListResult<OrderSeat> getOrderseatById (String id, int availData){
+        ListResult<OrderSeat> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
             result.setCode("1");
             result.setCode("1");
@@ -121,10 +120,10 @@ public class OrderseatServiceImpl implements OrderseatService {
         }
         try{
             // TODO : 前置代码
-            List<Orderseat> orderseatList = orderseatDao.getById(id, availData);
+            List<OrderSeat> orderSeatList = orderseatDao.getById(id, availData);
             // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(orderseatList)){
-                result.setDataList(orderseatList);
+            if(CommonUtils.isNotEmpty(orderSeatList)){
+                result.setDataList(orderSeatList);
             }
         } catch (Exception e){
             logger.error("saveOrderseatById error:{}", e.getMessage());
@@ -183,19 +182,19 @@ public class OrderseatServiceImpl implements OrderseatService {
         }
         try{
             // TODO : 前置代码
-        Orderseat orderseat = new Orderseat();
-        orderseat.setId(id);
-        orderseat.setOrderdetailId(orderdetailId);
-        orderseat.setSeatId(seatId);
-        orderseat.setSysCreateTime(sysCreateTime);
-        orderseat.setSysCreator(sysCreator);
-        orderseat.setSysUpdateTime(sysUpdateTime);
-        orderseat.setSysUpdater(sysUpdater);
-        orderseat.setSysDeleted(sysDeleted);
-        orderseat.setSysHash(sysHash);
-        orderseat.setSysAvailData(sysAvailData);
-        orderseat.setSysUpdater(operator);
-        orderseatDao.update(orderseat);
+        OrderSeat orderSeat = new OrderSeat();
+        orderSeat.setId(id);
+        orderSeat.setOrderdetailId(orderdetailId);
+        orderSeat.setSeatId(seatId);
+        orderSeat.setSysCreateTime(sysCreateTime);
+        orderSeat.setSysCreator(sysCreator);
+        orderSeat.setSysUpdateTime(sysUpdateTime);
+        orderSeat.setSysUpdater(sysUpdater);
+        orderSeat.setSysDeleted(sysDeleted);
+        orderSeat.setSysHash(sysHash);
+        orderSeat.setSysAvailData(sysAvailData);
+        orderSeat.setSysUpdater(operator);
+        orderseatDao.update(orderSeat);
             // TODO : 后置代码
             result.setData(True);
         } catch (Exception e){

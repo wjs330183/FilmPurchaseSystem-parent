@@ -10,7 +10,7 @@ import java.util.*;
 * @author wangjs
 * @date 2018-04-19
 */
-public interface OrderheadDao {
+public interface OrderHeadDAO {
 
     int save(@Param("entity")Orderhead entity);
 

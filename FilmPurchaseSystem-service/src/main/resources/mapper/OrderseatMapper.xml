@@ -87,7 +87,7 @@
 
 
 <!-- update entity -->
-    <update id="update" parameterType="com.ioe.entity.Orderseat">
+    <update id="update" parameterType="com.ioe.entity.OrderSeat">
         update
         <include refid="tableName"/>
         set

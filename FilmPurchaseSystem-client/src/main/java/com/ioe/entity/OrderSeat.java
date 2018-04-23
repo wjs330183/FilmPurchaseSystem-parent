@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 * @author wangjs
 * @date 2018-04-19
 */
-public class Orderseat extends BaseEntity {
+public class OrderSeat extends BaseEntity {
 
     /**
     *
