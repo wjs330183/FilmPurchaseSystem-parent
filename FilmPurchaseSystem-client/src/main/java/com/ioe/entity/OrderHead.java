@@ -4,6 +4,11 @@ import java.sql.Date;
 
 public class OrderHead extends BaseEntity{
     /**
+     *
+     */
+    private String id;
+
+    /**
      * 订单ID
      */
     private String orderHeadId;
@@ -16,6 +21,13 @@ public class OrderHead extends BaseEntity{
      */
     private String customerId;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getOrderHeadId() {
         return orderHeadId;

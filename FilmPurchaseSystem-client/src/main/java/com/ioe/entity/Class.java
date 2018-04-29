@@ -1,6 +1,14 @@
 package com.ioe.entity;
 
+import java.math.BigDecimal;
+
 public class Class extends BaseEntity{
+
+    /**
+     *
+     */
+    private String id;
+
     /**
      * 等级ID
      */
@@ -12,7 +20,15 @@ public class Class extends BaseEntity{
     /**
      * 等级折扣
      */
-    private double classDiscount;
+    private BigDecimal classDiscount;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getClassId() {
         return classId;
@@ -30,11 +46,11 @@ public class Class extends BaseEntity{
         this.className = className;
     }
 
-    public double getClassDiscount() {
+    public BigDecimal getClassDiscount() {
         return classDiscount;
     }
 
-    public void setClassDiscount(double classDiscount) {
+    public void setClassDiscount(BigDecimal classDiscount) {
         this.classDiscount = classDiscount;
     }
 

@@ -1,5 +1,8 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.MovieDao;
+import com.ioe.service.MovieService;
+import com.ioe.utils.CommonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -35,9 +38,9 @@ public class MovieServiceImpl implements MovieService {
     * 单个保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveMovie(
+    public DataResult<String> saveMovie(
             String movieId,
             String movieName,
             String movieMainactor,
@@ -64,13 +67,6 @@ public class MovieServiceImpl implements MovieService {
             movie.setMovieRelease(movieRelease);
             movie.setMovieEnantiomer(movieEnantiomer);
             movie.setMovieDescription(movieDescription);
-            movie.setSysCreateTime(sysCreateTime);
-            movie.setSysCreator(sysCreator);
-            movie.setSysUpdateTime(sysUpdateTime);
-            movie.setSysUpdater(sysUpdater);
-            movie.setSysDeleted(sysDeleted);
-            movie.setSysHash(sysHash);
-            movie.setSysAvailData(sysAvailData);
             movieDao.save(movie);
             // TODO : 后置代码
         } catch (Exception e){
@@ -86,9 +82,9 @@ public class MovieServiceImpl implements MovieService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveMovieBatch (String movieJson, String operator){
+    public DataResult<Boolean> saveMovieBatch(String movieJson, String operator){
         if(CommonUtils.isEmpty(movieJson)){
             result.setCode("1");
             result.setCode("1");
@@ -121,7 +117,7 @@ public class MovieServiceImpl implements MovieService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Movie> getMovieById (String id, int availData){
         ListResult<Movie> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -148,7 +144,7 @@ public class MovieServiceImpl implements MovieService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteMovieById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -177,7 +173,7 @@ public class MovieServiceImpl implements MovieService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateMovie (
                 String id,
@@ -234,7 +230,7 @@ public class MovieServiceImpl implements MovieService {
 	
     */
     @Override
-    @Stat
+
     public ListResult<Movie> getMovieByMovieId (String movieId, int availData){
         ListResult<Movie> result = new ListResult();
         //TODO:数据校验

@@ -1,22 +1,19 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.OrderHeadDao;
 import com.ioe.service.OrderHeadService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ioe.entity.Orderhead;
-import com.ioe.service.Orderhead;
 
 /**
 * 描述：
@@ -29,13 +26,13 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     private static Logger logger = LoggerFactory.getLogger(OrderHeadServiceImpl.class);
 
     @Resource
-    private OrderheadDao orderheadDao;
+    private OrderHeadDao orderheadDao;
 
     /**
     * 单个保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveOrderhead(
             String orderheadId,
@@ -78,7 +75,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveOrderheadBatch (String orderheadJson, String operator){
         if(CommonUtils.isEmpty(orderheadJson)){
@@ -113,7 +110,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Orderhead> getOrderheadById (String id, int availData){
         ListResult<Orderhead> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -140,7 +137,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteOrderheadById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -169,7 +166,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateOrderhead (
                 String id,
@@ -218,7 +215,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
 	
     */
     @Override
-    @Stat
+
     public ListResult<Orderhead> getOrderheadByOrderheadId (String orderheadId, int availData){
         ListResult<Orderhead> result = new ListResult();
         //TODO:数据校验

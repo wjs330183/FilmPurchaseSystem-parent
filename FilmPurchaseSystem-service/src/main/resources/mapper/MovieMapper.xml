@@ -3,7 +3,7 @@
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.ioe.dao.t_cjlu_movieDao">
 
-    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_movieEntity">
+    <resultMap id="resultMap" type="com.ioe.entity.Movie">
         <result property="id" column="id" jdbcType="VARCHAR"/>
         <result property="movieId" column="movie_id" jdbcType="VARCHAR"/>
         <result property="movieName" column="movie_name" jdbcType="VARCHAR"/>

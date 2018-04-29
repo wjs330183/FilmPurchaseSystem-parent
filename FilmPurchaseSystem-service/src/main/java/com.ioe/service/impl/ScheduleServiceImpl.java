@@ -1,22 +1,20 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.ScheduleDao;
+import com.ioe.service.ScheduleService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Schedule;
-import com.ioe.service.Schedule;
 
 /**
 * 描述：
@@ -35,7 +33,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     * 单个保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveSchedule(
             String scheduleId,
@@ -82,7 +80,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveScheduleBatch (String scheduleJson, String operator){
         if(CommonUtils.isEmpty(scheduleJson)){
@@ -117,7 +115,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Schedule> getScheduleById (String id, int availData){
         ListResult<Schedule> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -144,7 +142,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteScheduleById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -173,7 +171,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateSchedule (
                 String id,
@@ -226,7 +224,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 	
     */
     @Override
-    @Stat
+
     public ListResult<Schedule> getScheduleByScheduleId (String scheduleId, int availData){
         ListResult<Schedule> result = new ListResult();
         //TODO:数据校验

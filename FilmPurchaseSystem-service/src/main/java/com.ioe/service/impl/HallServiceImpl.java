@@ -1,22 +1,19 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.HallDao;
+import com.ioe.service.HallService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
-import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Hall;
-import com.ioe.service.Hall;
 
 /**
 * 描述：
@@ -35,7 +32,7 @@ public class HallServiceImpl implements HallService {
     * 单个保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveHall(
             String hallId,
@@ -56,13 +53,6 @@ public class HallServiceImpl implements HallService {
             hall.setHallId(hallId);
             hall.setHallSeats(hallSeats);
             hall.setHallDescription(hallDescription);
-            hall.setSysCreateTime(sysCreateTime);
-            hall.setSysCreator(sysCreator);
-            hall.setSysUpdateTime(sysUpdateTime);
-            hall.setSysUpdater(sysUpdater);
-            hall.setSysDeleted(sysDeleted);
-            hall.setSysHash(sysHash);
-            hall.setSysAvailData(sysAvailData);
             hallDao.save(hall);
             // TODO : 后置代码
         } catch (Exception e){
@@ -78,7 +68,7 @@ public class HallServiceImpl implements HallService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveHallBatch (String hallJson, String operator){
         if(CommonUtils.isEmpty(hallJson)){
@@ -113,7 +103,7 @@ public class HallServiceImpl implements HallService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Hall> getHallById (String id, int availData){
         ListResult<Hall> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -140,7 +130,7 @@ public class HallServiceImpl implements HallService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteHallById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -169,7 +159,7 @@ public class HallServiceImpl implements HallService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateHall (
                 String id,
@@ -191,14 +181,6 @@ public class HallServiceImpl implements HallService {
         hall.setHallId(hallId);
         hall.setHallSeats(hallSeats);
         hall.setHallDescription(hallDescription);
-        hall.setSysCreateTime(sysCreateTime);
-        hall.setSysCreator(sysCreator);
-        hall.setSysUpdateTime(sysUpdateTime);
-        hall.setSysUpdater(sysUpdater);
-        hall.setSysDeleted(sysDeleted);
-        hall.setSysHash(sysHash);
-        hall.setSysAvailData(sysAvailData);
-        hall.setSysUpdater(operator);
         hallDao.update(hall);
             // TODO : 后置代码
             result.setData(True);
@@ -218,7 +200,7 @@ public class HallServiceImpl implements HallService {
 	
     */
     @Override
-    @Stat
+
     public ListResult<Hall> getHallByHallId (String hallId, int availData){
         ListResult<Hall> result = new ListResult();
         //TODO:数据校验

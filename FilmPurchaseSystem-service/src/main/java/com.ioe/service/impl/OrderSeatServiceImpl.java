@@ -1,21 +1,20 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.OrderSeatDao;
+import com.ioe.service.OrderSeatService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.ioe.entity.OrderSeat;
-import com.ioe.service.Orderseat;
 
 /**
 * 描述：
@@ -23,18 +22,17 @@ import com.ioe.service.Orderseat;
 * @date 2018-04-19
 */
 @Service("orderseatService")
-public class OrderSeatServiceImpl implements OrderseatService {
+public class OrderSeatServiceImpl implements OrderSeatService {
 
     private static Logger logger = LoggerFactory.getLogger(OrderSeatServiceImpl.class);
 
     @Resource
-    private OrderseatDao orderseatDao;
+    private OrderSeatDao orderseatDao;
 
     /**
     * 单个保存
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveOrderseat(
             String orderdetailId,
@@ -75,7 +73,6 @@ public class OrderSeatServiceImpl implements OrderseatService {
     * 批量保存
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveOrderseatBatch (String orderseatJson, String operator){
         if(CommonUtils.isEmpty(orderseatJson)){
@@ -110,7 +107,6 @@ public class OrderSeatServiceImpl implements OrderseatService {
     * 根据id获取对象
     */
     @Override
-    @Stat
     public ListResult<OrderSeat> getOrderseatById (String id, int availData){
         ListResult<OrderSeat> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -137,7 +133,7 @@ public class OrderSeatServiceImpl implements OrderseatService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteOrderseatById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -166,7 +162,7 @@ public class OrderSeatServiceImpl implements OrderseatService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateOrderseat (
                 String id,

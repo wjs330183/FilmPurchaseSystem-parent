@@ -2,9 +2,7 @@ package com.ioe.service;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import com.ioe.entity.Class;
-import java.util.*;
 import java.math.BigDecimal;
 
 /**
@@ -31,7 +29,7 @@ public interface ClassService {
     * @param classJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveClassBatch(String classJson, String operator);
+    ListResult<String> saveClassBatch(String classJson, String operator);
 
     /**
     * 根据id获取对象

@@ -1,22 +1,19 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.CustomerDao;
+import com.ioe.service.CustomerService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
-import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Customer;
-import com.ioe.service.Customer;
 
 /**
 * 描述：
@@ -35,7 +32,6 @@ public class CustomerServiceImpl implements CustomerService {
     * 单个保存
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveCustomer(
             String customerId,
@@ -82,7 +78,6 @@ public class CustomerServiceImpl implements CustomerService {
     * 批量保存
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveCustomerBatch (String customerJson, String operator){
         if(CommonUtils.isEmpty(customerJson)){
@@ -117,7 +112,6 @@ public class CustomerServiceImpl implements CustomerService {
     * 根据id获取对象
     */
     @Override
-    @Stat
     public ListResult<Customer> getCustomerById (String id, int availData){
         ListResult<Customer> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -144,7 +138,6 @@ public class CustomerServiceImpl implements CustomerService {
     * 根据id删除对象
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteCustomerById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -173,7 +166,6 @@ public class CustomerServiceImpl implements CustomerService {
     * 更新对象
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateCustomer (
                 String id,
@@ -199,14 +191,6 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setCustomerEmail(customerEmail);
         customer.setCustomerMobile(customerMobile);
         customer.setClassId(classId);
-        customer.setSysCreateTime(sysCreateTime);
-        customer.setSysCreator(sysCreator);
-        customer.setSysUpdateTime(sysUpdateTime);
-        customer.setSysUpdater(sysUpdater);
-        customer.setSysDeleted(sysDeleted);
-        customer.setSysHash(sysHash);
-        customer.setSysAvailData(sysAvailData);
-        customer.setSysUpdater(operator);
         customerDao.update(customer);
             // TODO : 后置代码
             result.setData(True);
@@ -226,7 +210,6 @@ public class CustomerServiceImpl implements CustomerService {
 	
     */
     @Override
-    @Stat
     public ListResult<Customer> getCustomerByCustomerId (String customerId, int availData){
         ListResult<Customer> result = new ListResult();
         //TODO:数据校验

@@ -2,10 +2,7 @@ package com.ioe.service;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import com.ioe.entity.Hall;
-import java.util.*;
-import java.math.BigDecimal;
 
 /**
 * 描述： 服务实现层接口

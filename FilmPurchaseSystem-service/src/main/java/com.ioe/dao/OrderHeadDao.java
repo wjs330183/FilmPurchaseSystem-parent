@@ -1,6 +1,6 @@
 package com.ioe.dao;
 
-import com.ioe.entity.Orderhead;
+import com.ioe.entity.OrderHead;
 
 import org.apache.ibatis.annotations.Param;
 import java.util.*;
@@ -12,13 +12,13 @@ import java.util.*;
 */
 public interface OrderHeadDao {
 
-    int save(@Param("entity")Orderhead entity);
+    int save(@Param("entity")OrderHead entity);
 
-    int saveBatch(@Param("entities")List<Orderhead> entities);
+    int saveBatch(@Param("entities")List<OrderHead> entities);
 
-    int update(@Param("entity")Orderhead entity);
+    int update(@Param("entity")OrderHead entity);
 
-    List<Orderhead> getById (@Param("id")String id, @Param("availData")int availData);
+    List<OrderHead> getById (@Param("id")String id, @Param("availData")int availData);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface OrderHeadDao {
     /**
     * index:t_cjlu_orderhead ==> OrderHead_ID_UNIQUE
     */
-    List<Orderhead> getByOrderheadId (String orderheadId, @Param("availData")int availData);
+    List<OrderHead> getByOrderheadId (String orderheadId, @Param("availData")int availData);
 
 }

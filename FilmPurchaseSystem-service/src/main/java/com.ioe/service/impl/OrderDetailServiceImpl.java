@@ -1,21 +1,19 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.OrderDetailDao;
+import com.ioe.service.OrderDetailService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
-import java.util.*;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ioe.entity.Orderdetail;
-import com.ioe.service.Orderdetail;
+
 
 /**
 * 描述：
@@ -23,18 +21,18 @@ import com.ioe.service.Orderdetail;
 * @date 2018-04-19
 */
 @Service("orderdetailService")
-public class OrderDetailServiceImpl implements OrderdetailService {
+public class OrderDetailServiceImpl implements OrderDetailService {
 
     private static Logger logger = LoggerFactory.getLogger(OrderDetailServiceImpl.class);
 
     @Resource
-    private OrderdetailDao orderdetailDao;
+    private OrderDetailDao orderdetailDao;
 
     /**
     * 单个保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveOrderdetail(
             String orderdetailId,
@@ -79,7 +77,7 @@ public class OrderDetailServiceImpl implements OrderdetailService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveOrderdetailBatch (String orderdetailJson, String operator){
         if(CommonUtils.isEmpty(orderdetailJson)){
@@ -114,7 +112,7 @@ public class OrderDetailServiceImpl implements OrderdetailService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Orderdetail> getOrderdetailById (String id, int availData){
         ListResult<Orderdetail> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -141,7 +139,7 @@ public class OrderDetailServiceImpl implements OrderdetailService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteOrderdetailById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -170,7 +168,7 @@ public class OrderDetailServiceImpl implements OrderdetailService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateOrderdetail (
                 String id,

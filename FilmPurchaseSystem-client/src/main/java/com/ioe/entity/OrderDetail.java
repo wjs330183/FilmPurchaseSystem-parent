@@ -2,6 +2,11 @@ package com.ioe.entity;
 
 public class OrderDetail extends BaseEntity{
     /**
+     *
+     */
+    private String id;
+
+    /**
      * 订单明细ID
      */
     private String orderDetailId;
@@ -18,6 +23,13 @@ public class OrderDetail extends BaseEntity{
      */
     private double orderdetailAdjustedPrice;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getOrderHeadId() {
         return orderHeadId;

@@ -1,22 +1,19 @@
 package com.ioe.service.impl;
 
+import com.ioe.dao.SeatDao;
+import com.ioe.service.SeatService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
-import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Seat;
-import com.ioe.service.Seat;
 
 /**
 * 描述：
@@ -35,7 +32,6 @@ public class SeatServiceImpl implements SeatService {
     * 单个保存
     */
     @Override
-    @Stat
     @Transactional(rollbackFor = Exception.class)
     DataResult<String> saveSeat(
             String seatId,
@@ -82,7 +78,7 @@ public class SeatServiceImpl implements SeatService {
     * 批量保存
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveSeatBatch (String seatJson, String operator){
         if(CommonUtils.isEmpty(seatJson)){
@@ -117,7 +113,7 @@ public class SeatServiceImpl implements SeatService {
     * 根据id获取对象
     */
     @Override
-    @Stat
+
     public ListResult<Seat> getSeatById (String id, int availData){
         ListResult<Seat> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
@@ -144,7 +140,7 @@ public class SeatServiceImpl implements SeatService {
     * 根据id删除对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteSeatById(String id, String operator){
         DataResult<Integer> result = new DataResult();
@@ -173,7 +169,7 @@ public class SeatServiceImpl implements SeatService {
     * 更新对象
     */
     @Override
-    @Stat
+
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> updateSeat (
                 String id,
@@ -226,7 +222,7 @@ public class SeatServiceImpl implements SeatService {
 	
     */
     @Override
-    @Stat
+
     public ListResult<Seat> getSeatBySeatId (String seatId, int availData){
         ListResult<Seat> result = new ListResult();
         //TODO:数据校验

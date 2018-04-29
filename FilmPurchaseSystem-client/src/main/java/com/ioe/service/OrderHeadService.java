@@ -2,10 +2,8 @@ package com.ioe.service;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
-import com.ioe.entity.Orderhead;
+import com.ioe.entity.OrderHead;
 import java.util.*;
-import java.math.BigDecimal;
 
 /**
 * 描述： 服务实现层接口
@@ -36,7 +34,7 @@ public interface OrderHeadService {
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Orderhead> getOrderheadById (String id, int availData);
+    ListResult<OrderHead> getOrderheadById (String id, int availData);
 
     /**
     * 根据id删除对象
@@ -63,6 +61,6 @@ public interface OrderHeadService {
         * @param orderheadId 订单ID
 	
     */
-    ListResult<Orderhead> getOrderheadByOrderheadId (String orderheadId, int availData);
+    ListResult<OrderHead> getOrderheadByOrderheadId (String orderheadId, int availData);
 
 }

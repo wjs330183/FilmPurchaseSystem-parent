@@ -2,9 +2,7 @@ package com.ioe.service;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
-import com.ioe.entity.Orderdetail;
-import java.util.*;
+import com.ioe.entity.OrderDetail;
 import java.math.BigDecimal;
 
 /**
@@ -37,7 +35,7 @@ public interface OrderDetailService {
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Orderdetail> getOrderdetailById (String id, int availData);
+    ListResult<OrderDetail> getOrderdetailById (String id, int availData);
 
     /**
     * 根据id删除对象

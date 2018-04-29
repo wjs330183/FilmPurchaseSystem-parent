@@ -1,6 +1,6 @@
 package com.ioe.dao;
 
-import com.ioe.entity.Orderdetail;
+import com.ioe.entity.OrderDetail;
 
 import org.apache.ibatis.annotations.Param;
 import java.util.*;
@@ -12,13 +12,13 @@ import java.util.*;
 */
 public interface OrderDetailDao {
 
-    int save(@Param("entity")Orderdetail entity);
+    int save(@Param("entity")OrderDetail entity);
 
-    int saveBatch(@Param("entities")List<Orderdetail> entities);
+    int saveBatch(@Param("entities")List<OrderDetail> entities);
 
-    int update(@Param("entity")Orderdetail entity);
+    int update(@Param("entity")OrderDetail entity);
 
-    List<Orderdetail> getById (@Param("id")String id, @Param("availData")int availData);
+    List<OrderDetail> getById (@Param("id")String id, @Param("availData")int availData);
 
     int deleteById (String id, @Param("operator")String operator);
 
