@@ -2,6 +2,8 @@ package com.ioe.service.impl;
 
 import com.ioe.dao.CustomerDao;
 import com.ioe.service.CustomerService;
+import com.ioe.utils.CommonUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -33,7 +35,7 @@ public class CustomerServiceImpl implements CustomerService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveCustomer(
+    public DataResult<String> saveCustomer(
             String customerId,
             String customerName,
             String customerEmail,
@@ -42,7 +44,7 @@ public class CustomerServiceImpl implements CustomerService {
             String operator
     ){
         DataResult<String> result = new DataResult();
-        if(false){
+        if(StringUtils.isEmpty()){
             result.setCode("1");
             result.setCode("1");
             return result;
@@ -79,7 +81,7 @@ public class CustomerServiceImpl implements CustomerService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveCustomerBatch (String customerJson, String operator){
+    public DataResult<Boolean> saveCustomerBatch(String customerJson, String operator){
         if(CommonUtils.isEmpty(customerJson)){
             result.setCode("1");
             result.setCode("1");
@@ -167,14 +169,14 @@ public class CustomerServiceImpl implements CustomerService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateCustomer (
-                String id,
-                String customerId,
-                String customerName,
-                String customerEmail,
-                String customerMobile,
-                String classId,
-                String operator
+    public DataResult<Boolean> updateCustomer(
+            String id,
+            String customerId,
+            String customerName,
+            String customerEmail,
+            String customerMobile,
+            String classId,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){

@@ -2,7 +2,8 @@ package com.ioe.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.*;
 
 public class CommonUtils {
@@ -41,7 +42,9 @@ public class CommonUtils {
         public static boolean isEmpty(String str) {
             return str == null || "".equals(str);
         }
-
+    public static boolean isAnyEmpty(String str) {
+        return str == null || "".equals(str);
+    }
         public static boolean isNotEmpty(String str) {
             return str != null && !"".equals(str);
         }
@@ -124,6 +127,17 @@ public class CommonUtils {
 
             return list;
         }
+
+             /*  判断输入数据是否为NULL */
+       /* public static boolean checkFieldValueNull(String string) {
+
+            if (string == null) {
+                return true;
+            } else if (string.isEmpty()) {
+                return true;
+            }
+            return false;
+        }*/
     }
 
 

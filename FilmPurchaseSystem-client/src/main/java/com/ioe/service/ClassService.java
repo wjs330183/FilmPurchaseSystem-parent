@@ -22,7 +22,7 @@ public interface ClassService {
 	
     * @param operator 操作者编号
     */
-     DataResult<String>saveClass(String classId, String className, BigDecimal classDiscount, String classIsactive,  String operator);
+     DataResult<String>saveClass(String classId, String className, String classDiscount, String classIsactive,  String operator);
 
     /**
     * 批量保存

@@ -1,5 +1,6 @@
 package com.ioe.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.ioe.common.domain.Result;
 import com.ioe.dao.ClassDao;
 import com.ioe.service.ClassService;
@@ -41,13 +42,15 @@ public class ClassServiceImpl implements ClassService {
     public DataResult<String> saveClass(
             String classId,
             String className,
-            BigDecimal classDiscount,
+            String classDiscount,
             String classIsactive,
             String operator
     ){
         DataResult<String> result = new DataResult();
-        if(false){
-            result.setCode("1");
+        if(CommonUtils.isEmpty(classId)
+                && CommonUtils.isEmpty(className)
+                && CommonUtils.isEmpty(classIsactive)
+                ){
             result.setCode("1");
             return result;
         }
@@ -56,7 +59,7 @@ public class ClassServiceImpl implements ClassService {
             Class aClass = new Class();
             aClass.setClassId(classId);
             aClass.setClassName(className);
-            aClass.setClassDiscount(classDiscount);
+            aClass.setClassDiscount(new BigDecimal(classDiscount));
             classDao.save(aClass);
             // TODO : 后置代码
         } catch (Exception e){

@@ -2,6 +2,7 @@ package com.ioe.service.impl;
 
 import com.ioe.dao.HallDao;
 import com.ioe.service.HallService;
+import com.ioe.utils.CommonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -34,7 +35,7 @@ public class HallServiceImpl implements HallService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveHall(
+    public DataResult<String> saveHall(
             String hallId,
             String hallSeats,
             String hallDescription,
@@ -70,7 +71,7 @@ public class HallServiceImpl implements HallService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveHallBatch (String hallJson, String operator){
+    public DataResult<Boolean> saveHallBatch(String hallJson, String operator){
         if(CommonUtils.isEmpty(hallJson)){
             result.setCode("1");
             result.setCode("1");
