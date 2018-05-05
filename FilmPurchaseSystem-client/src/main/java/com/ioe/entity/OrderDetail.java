@@ -1,5 +1,7 @@
 package com.ioe.entity;
 
+import java.math.BigDecimal;
+
 public class OrderDetail extends BaseEntity{
     /**
      *
@@ -21,7 +23,7 @@ public class OrderDetail extends BaseEntity{
     /**
      * 打折后价格
      */
-    private double orderdetailAdjustedPrice;
+    private BigDecimal orderdetailAdjustedPrice;
 
     public String getId() {
         return id;
@@ -56,11 +58,11 @@ public class OrderDetail extends BaseEntity{
         this.scheduleId = scheduleId;
     }
 
-    public double getOrderdetailAdjustedPrice() {
+    public BigDecimal getOrderdetailAdjustedPrice() {
         return orderdetailAdjustedPrice;
     }
 
-    public void setOrderdetailAdjustedPrice(double orderdetailAdjustedPrice) {
+    public void setOrderdetailAdjustedPrice(BigDecimal orderdetailAdjustedPrice) {
         this.orderdetailAdjustedPrice = orderdetailAdjustedPrice;
     }
 }

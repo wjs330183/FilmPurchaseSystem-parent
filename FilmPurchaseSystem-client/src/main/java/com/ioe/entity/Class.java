@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Class extends BaseEntity{
 
     /**
-     *
+     *ID
      */
     private String id;
 
@@ -21,6 +21,21 @@ public class Class extends BaseEntity{
      * 等级折扣
      */
     private BigDecimal classDiscount;
+
+
+    /*
+    * 是否使用 使用/不使用：1/0
+    * */
+    private Integer classIsactive;
+
+    public Integer getClassIsactive() {
+        return classIsactive;
+    }
+
+    public void setClassIsactive(Integer classIsactive) {
+        this.classIsactive = classIsactive;
+    }
+
 
     public String getId() {
         return id;

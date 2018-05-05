@@ -7,19 +7,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
-import com.ioe.stat.annotation.Stat;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import com.ioe.common.domain.PageResult;
 import java.util.*;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
 
 import com.ioe.entity.Movie;
-import com.ioe.service.Movie;
 
 /**
 * 描述：
@@ -85,6 +81,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Boolean> saveMovieBatch(String movieJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(movieJson)){
             result.setCode("1");
             result.setCode("1");
@@ -203,13 +200,6 @@ public class MovieServiceImpl implements MovieService {
         movie.setMovieRelease(movieRelease);
         movie.setMovieEnantiomer(movieEnantiomer);
         movie.setMovieDescription(movieDescription);
-        movie.setSysCreateTime(sysCreateTime);
-        movie.setSysCreator(sysCreator);
-        movie.setSysUpdateTime(sysUpdateTime);
-        movie.setSysUpdater(sysUpdater);
-        movie.setSysDeleted(sysDeleted);
-        movie.setSysHash(sysHash);
-        movie.setSysAvailData(sysAvailData);
         movie.setSysUpdater(operator);
         movieDao.update(movie);
             // TODO : 后置代码

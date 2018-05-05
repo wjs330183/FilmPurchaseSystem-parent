@@ -35,7 +35,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveSchedule(
+    public DataResult<String> saveSchedule(
             String scheduleId,
             String movieId,
             String hallId,
@@ -58,13 +58,6 @@ public class ScheduleServiceImpl implements ScheduleService {
             schedule.setHallId(hallId);
             schedule.setSchedulePrice(schedulePrice);
             schedule.setScheduleBegindatetime(scheduleBegindatetime);
-            schedule.setSysCreateTime(sysCreateTime);
-            schedule.setSysCreator(sysCreator);
-            schedule.setSysUpdateTime(sysUpdateTime);
-            schedule.setSysUpdater(sysUpdater);
-            schedule.setSysDeleted(sysDeleted);
-            schedule.setSysHash(sysHash);
-            schedule.setSysAvailData(sysAvailData);
             scheduleDao.save(schedule);
             // TODO : 后置代码
         } catch (Exception e){
@@ -82,7 +75,8 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveScheduleBatch (String scheduleJson, String operator){
+    public DataResult<Boolean> saveScheduleBatch(String scheduleJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(scheduleJson)){
             result.setCode("1");
             result.setCode("1");
@@ -173,14 +167,14 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateSchedule (
-                String id,
-                String scheduleId,
-                String movieId,
-                String hallId,
-                BigDecimal schedulePrice,
-                String scheduleBegindatetime,
-                String operator
+    public DataResult<Boolean> updateSchedule(
+            String id,
+            String scheduleId,
+            String movieId,
+            String hallId,
+            BigDecimal schedulePrice,
+            String scheduleBegindatetime,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){
@@ -197,13 +191,6 @@ public class ScheduleServiceImpl implements ScheduleService {
         schedule.setHallId(hallId);
         schedule.setSchedulePrice(schedulePrice);
         schedule.setScheduleBegindatetime(scheduleBegindatetime);
-        schedule.setSysCreateTime(sysCreateTime);
-        schedule.setSysCreator(sysCreator);
-        schedule.setSysUpdateTime(sysUpdateTime);
-        schedule.setSysUpdater(sysUpdater);
-        schedule.setSysDeleted(sysDeleted);
-        schedule.setSysHash(sysHash);
-        schedule.setSysAvailData(sysAvailData);
         schedule.setSysUpdater(operator);
         scheduleDao.update(schedule);
             // TODO : 后置代码

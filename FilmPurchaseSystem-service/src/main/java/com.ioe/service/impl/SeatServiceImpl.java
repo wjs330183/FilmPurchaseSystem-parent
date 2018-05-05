@@ -2,6 +2,7 @@ package com.ioe.service.impl;
 
 import com.ioe.dao.SeatDao;
 import com.ioe.service.SeatService;
+import com.ioe.utils.CommonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -33,7 +34,7 @@ public class SeatServiceImpl implements SeatService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveSeat(
+    public DataResult<String> saveSeat(
             String seatId,
             String hallId,
             String seatRow,
@@ -56,13 +57,6 @@ public class SeatServiceImpl implements SeatService {
             seat.setSeatRow(seatRow);
             seat.setSeatColumn(seatColumn);
             seat.setSeatIsactive(seatIsactive);
-            seat.setSysCreateTime(sysCreateTime);
-            seat.setSysCreator(sysCreator);
-            seat.setSysUpdateTime(sysUpdateTime);
-            seat.setSysUpdater(sysUpdater);
-            seat.setSysDeleted(sysDeleted);
-            seat.setSysHash(sysHash);
-            seat.setSysAvailData(sysAvailData);
             seatDao.save(seat);
             // TODO : 后置代码
         } catch (Exception e){
@@ -80,7 +74,8 @@ public class SeatServiceImpl implements SeatService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveSeatBatch (String seatJson, String operator){
+    public DataResult<Boolean> saveSeatBatch(String seatJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(seatJson)){
             result.setCode("1");
             result.setCode("1");
@@ -171,14 +166,14 @@ public class SeatServiceImpl implements SeatService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateSeat (
-                String id,
-                String seatId,
-                String hallId,
-                String seatRow,
-                String seatColumn,
-                String seatIsactive,
-                String operator
+    public DataResult<Boolean> updateSeat(
+            String id,
+            String seatId,
+            String hallId,
+            String seatRow,
+            String seatColumn,
+            String seatIsactive,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){
@@ -195,13 +190,6 @@ public class SeatServiceImpl implements SeatService {
         seat.setSeatRow(seatRow);
         seat.setSeatColumn(seatColumn);
         seat.setSeatIsactive(seatIsactive);
-        seat.setSysCreateTime(sysCreateTime);
-        seat.setSysCreator(sysCreator);
-        seat.setSysUpdateTime(sysUpdateTime);
-        seat.setSysUpdater(sysUpdater);
-        seat.setSysDeleted(sysDeleted);
-        seat.setSysHash(sysHash);
-        seat.setSysAvailData(sysAvailData);
         seat.setSysUpdater(operator);
         seatDao.update(seat);
             // TODO : 后置代码

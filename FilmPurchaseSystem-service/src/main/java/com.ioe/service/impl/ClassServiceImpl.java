@@ -1,19 +1,22 @@
 package com.ioe.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
-import com.ioe.common.domain.Result;
 import com.ioe.dao.ClassDao;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.ClassService;
 import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+
 import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
+
 import java.util.*;
 import java.math.BigDecimal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,10 +24,11 @@ import com.ioe.entity.Class;
 
 
 /**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
+ * 描述：
+ *
+ * @author wangjs
+ * @date 2018-04-19
+ */
 @Service("classService")
 public class ClassServiceImpl implements ClassService {
 
@@ -33,130 +37,122 @@ public class ClassServiceImpl implements ClassService {
     @Resource
     private ClassDao classDao;
 
-
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
     /**
-    * 单个保存
-    */
+     * 单个保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public DataResult<String> saveClass(
             String classId,
             String className,
             String classDiscount,
-            String classIsactive,
+            Integer classIsactive,
             String operator
-    ){
+    ) {
         DataResult<String> result = new DataResult();
-        if(CommonUtils.isEmpty(classId)
-                && CommonUtils.isEmpty(className)
-                && CommonUtils.isEmpty(classIsactive)
-                ){
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(classId,className,classDiscount,String.valueOf(classIsactive),operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码(setId未设置)
+        try {
             Class aClass = new Class();
+            aClass.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             aClass.setClassId(classId);
             aClass.setClassName(className);
             aClass.setClassDiscount(new BigDecimal(classDiscount));
+            aClass.setClassIsactive(classIsactive);
+            aClass.setSysCreator(operator);
+            aClass.setSysUpdater(operator);
             classDao.save(aClass);
-            // TODO : 后置代码
-        } catch (Exception e){
+            result.setData(aClass.getId());
+        } catch (Exception e) {
             logger.error("saveClass error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveClass is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 批量保存
-    */
+     * 批量保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public ListResult<String> saveClassBatch(String classJson, String operator){
+    public ListResult<String> saveClassBatch(String classJson, String operator) {
 
         ListResult<String> result = new ListResult<String>();
-        if(CommonUtils.isEmpty(classJson)){
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(classJson,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             List<Class> classList = CommonUtils.getListByJson(classJson, Class.class);
 
-            if (CommonUtils.isEmpty(classList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
-            }
             List<String> ids = new ArrayList<String>();
             for (Class aClass : classList) {
-                //TODO
-//                aClass.setClassId();
+                aClass.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
                 ids.add(aClass.getId());
             }
-            // TODO : 前置代码
             classDao.saveBatch(classList);
             result.setDataList(ids);
-            // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveClassBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveClassBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据id获取对象
-    */
+     * 根据id获取对象
+     */
     @Override
-    public ListResult<Class> getClassById (String id, int availData){
+    public ListResult<Class> getClassById(String id) {
         ListResult<Class> result = new ListResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isEmpty(id)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-            List<Class> classList = classDao.getById(id, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(classList)){
+        try {
+
+            List<Class> classList = classDao.getById(id);
+
+            if (CommonUtils.isNotEmpty(classList)) {
                 result.setDataList(classList);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveClassById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("getClassById is error");
         }
         return result;
     }
 
     /**
-    * 根据id删除对象
-    */
+     * 根据id删除对象
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Integer> deleteClassById(String id, String operator){
+    public DataResult<Integer> deleteClassById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+
+        if (CommonUtils.isAnyEmpty(id,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        int count = classDao.deleteById(id, operator);
-            // TODO : 后置代码
+        try {
+            // TODO : 未理解cout为何会增加
+            int count = classDao.deleteById(id, operator);
+
             result.setData(count);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("deleteClassById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteClassById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -164,67 +160,63 @@ public class ClassServiceImpl implements ClassService {
 
 
     /**
-    * 更新对象
-    */
+     * 更新对象
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateClass (
-                String id,
-                String classId,
-                String className,
-                BigDecimal classDiscount,
-                String classIsactive,
-                String operator
-    ){
-        DataResult<Boolean> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+    public DataResult<Integer> updateClass(
+            String id,
+            String classId,
+            String className,
+            String classDiscount,
+            Integer classIsactive,
+            String operator
+    ) {
+        DataResult<Integer> result = new DataResult();
+        if (CommonUtils.isAnyEmpty(id,classId,className,classDiscount,String.valueOf(classIsactive),operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        Class class = new Class();
-        class.setId(id);
-        class.setClassId(classId);
-        class.setClassName(className);
-        class.setClassDiscount(classDiscount);
-        class.setClassIsactive(classIsactive);
-        classDao.update(class);
-            // TODO : 后置代码
-            result.setData(True);
-        } catch (Exception e){
+        try {
+            Class aclass = new Class();
+            aclass.setId(id);
+            aclass.setClassId(classId);
+            aclass.setClassName(className);
+            aclass.setClassDiscount(new BigDecimal(classDiscount));
+            aclass.setClassIsactive(classIsactive);
+            aclass.setSysCreator(operator);
+            aclass.setSysUpdater(operator);
+            int count = classDao.update(aclass);
+            result.setData(count);
+        } catch (Exception e) {
             logger.error("updateClass error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateClass is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据classId查询记录
-    *
-    * @param classId 等级ID号
-	
-    */
+     * 根据classId查询记录
+     *
+     * @param classId 等级ID号
+     */
     @Override
-    public ListResult<Class> getClassByClassId (String classId, int availData){
+    public ListResult<Class> getClassByClassId(String classId) {
         ListResult<Class> result = new ListResult();
-        //TODO:数据校验
-        //if(){
-        //    result.setCode("1");
-        //    result.setCode("1");
-        //    return result;
-        //}
-        try{
+       if(CommonUtils.isEmpty(classId)){
+           result.setCode(ErrorEnum.EMPTY_ERROR);
+           return result;
+       }
+        try {
             // TODO : 前置代码
-            List<Class> classList = classDao.getByClassId(classId, availData);
+            List<Class> classList = classDao.getByClassId(classId);
             // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(classList)){
+            if (CommonUtils.isNotEmpty(classList)) {
                 result.setDataList(classList);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("getClassByClassId error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");

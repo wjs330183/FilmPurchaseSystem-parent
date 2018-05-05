@@ -7,21 +7,25 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+
 import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
+
 import java.util.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.ioe.entity.Customer;
 
 /**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
+ * 描述：
+ *
+ * @author wangjs
+ * @date 2018-04-19
+ */
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
@@ -31,8 +35,8 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerDao customerDao;
 
     /**
-    * 单个保存
-    */
+     * 单个保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public DataResult<String> saveCustomer(
@@ -42,14 +46,14 @@ public class CustomerServiceImpl implements CustomerService {
             String customerMobile,
             String classId,
             String operator
-    ){
+    ) {
         DataResult<String> result = new DataResult();
-        if(StringUtils.isEmpty()){
+        if (StringUtils.isEmpty()) {
             result.setCode("1");
             result.setCode("1");
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
             Customer customer = new Customer();
             customer.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
@@ -58,16 +62,9 @@ public class CustomerServiceImpl implements CustomerService {
             customer.setCustomerEmail(customerEmail);
             customer.setCustomerMobile(customerMobile);
             customer.setClassId(classId);
-            customer.setSysCreateTime(sysCreateTime);
-            customer.setSysCreator(sysCreator);
-            customer.setSysUpdateTime(sysUpdateTime);
-            customer.setSysUpdater(sysUpdater);
-            customer.setSysDeleted(sysDeleted);
-            customer.setSysHash(sysHash);
-            customer.setSysAvailData(sysAvailData);
             customerDao.save(customer);
             // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveCustomer error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");
@@ -77,17 +74,18 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     /**
-    * 批量保存
-    */
+     * 批量保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> saveCustomerBatch(String customerJson, String operator){
-        if(CommonUtils.isEmpty(customerJson)){
+    public DataResult<Boolean> saveCustomerBatch(String customerJson, String operator) {
+        DataResult<Boolean> result = new DataResult();
+        if (CommonUtils.isEmpty(customerJson)) {
             result.setCode("1");
             result.setCode("1");
             return result;
         }
-        try{
+        try {
             List<Customer> customerList = CommonUtils.getListByJson(customerJson, Customer.class);
 
             if (CommonUtils.isEmpty(customerList)) {
@@ -101,7 +99,7 @@ public class CustomerServiceImpl implements CustomerService {
             result.setData(True);
 
             // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveCustomerBatch error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");
@@ -111,24 +109,24 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     /**
-    * 根据id获取对象
-    */
+     * 根据id获取对象
+     */
     @Override
-    public ListResult<Customer> getCustomerById (String id, int availData){
+    public ListResult<Customer> getCustomerById(String id, int availData) {
         ListResult<Customer> result = new ListResult();
-        if(CommonUtils.isEmpty(id)){
+        if (CommonUtils.isEmpty(id)) {
             result.setCode("1");
             result.setCode("1");
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
             List<Customer> customerList = customerDao.getById(id, availData);
             // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(customerList)){
+            if (CommonUtils.isNotEmpty(customerList)) {
                 result.setDataList(customerList);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveCustomerById error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");
@@ -137,23 +135,23 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     /**
-    * 根据id删除对象
-    */
+     * 根据id删除对象
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Integer> deleteCustomerById(String id, String operator){
+    public DataResult<Integer> deleteCustomerById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
+        if (CommonUtils.isEmpty(id)) {
             result.setCode("1");
             result.setCode("1");
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
-        int count = customerDao.deleteById(id, operator);
+            int count = customerDao.deleteById(id, operator);
             // TODO : 后置代码
             result.setData(count);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("deleteCustomerById error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");
@@ -163,10 +161,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
 
-
     /**
-    * 更新对象
-    */
+     * 更新对象
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Boolean> updateCustomer(
@@ -177,26 +174,26 @@ public class CustomerServiceImpl implements CustomerService {
             String customerMobile,
             String classId,
             String operator
-    ){
+    ) {
         DataResult<Boolean> result = new DataResult();
-        if(false){
+        if (false) {
             result.setCode("1");
             result.setCode("1");
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
-        Customer customer = new Customer();
-        customer.setId(id);
-        customer.setCustomerId(customerId);
-        customer.setCustomerName(customerName);
-        customer.setCustomerEmail(customerEmail);
-        customer.setCustomerMobile(customerMobile);
-        customer.setClassId(classId);
-        customerDao.update(customer);
+            Customer customer = new Customer();
+            customer.setId(id);
+            customer.setCustomerId(customerId);
+            customer.setCustomerName(customerName);
+            customer.setCustomerEmail(customerEmail);
+            customer.setCustomerMobile(customerMobile);
+            customer.setClassId(classId);
+            customerDao.update(customer);
             // TODO : 后置代码
             result.setData(True);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("updateCustomer error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");
@@ -206,13 +203,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     /**
-    * 根据customerId查询记录
-    *
-    * @param customerId 用户ID
-	
-    */
+     * 根据customerId查询记录
+     *
+     * @param customerId 用户ID
+     */
     @Override
-    public ListResult<Customer> getCustomerByCustomerId (String customerId, int availData){
+    public ListResult<Customer> getCustomerByCustomerId(String customerId, int availData) {
         ListResult<Customer> result = new ListResult();
         //TODO:数据校验
         //if(){
@@ -220,14 +216,14 @@ public class CustomerServiceImpl implements CustomerService {
         //    result.setCode("1");
         //    return result;
         //}
-        try{
+        try {
             // TODO : 前置代码
             List<Customer> customerList = customerDao.getByCustomerId(customerId, availData);
             // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(customerList)){
+            if (CommonUtils.isNotEmpty(customerList)) {
                 result.setDataList(customerList);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("getCustomerByCustomerId error:{}", e.getMessage());
             result.setCode("1");
             result.setMessage("1");

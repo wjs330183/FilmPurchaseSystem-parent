@@ -83,7 +83,7 @@
         select <include refid="columns"/>
         from <include refid="tableName"/>
         where id = #{id}
-        and sys_deleted=0 and sys_avail_data=#{availData}
+        and sys_deleted=0
     </select>
 
     <update id="deleteById">
@@ -117,7 +117,7 @@
         select <include refid="columns"/>
         from <include refid="tableName"/>
         where 1=1
-        and sys_deleted=0 and sys_avail_data=#{availData}
+        and sys_deleted=0
         <if test="classId!=null">
             and class_id=#{classId}
         </if>

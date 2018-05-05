@@ -2,6 +2,7 @@ package com.ioe.service.impl;
 
 import com.ioe.dao.OrderSeatDao;
 import com.ioe.service.OrderSeatService;
+import com.ioe.utils.CommonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -34,7 +35,7 @@ public class OrderSeatServiceImpl implements OrderSeatService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveOrderseat(
+    public DataResult<String> saveOrderseat(
             String orderdetailId,
             String seatId,
             String operator
@@ -49,15 +50,8 @@ public class OrderSeatServiceImpl implements OrderSeatService {
             // TODO : 前置代码
             OrderSeat orderSeat = new OrderSeat();
             orderSeat.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
-            orderSeat.setOrderdetailId(orderdetailId);
+            orderSeat.setOrderDetailId(orderdetailId);
             orderSeat.setSeatId(seatId);
-            orderSeat.setSysCreateTime(sysCreateTime);
-            orderSeat.setSysCreator(sysCreator);
-            orderSeat.setSysUpdateTime(sysUpdateTime);
-            orderSeat.setSysUpdater(sysUpdater);
-            orderSeat.setSysDeleted(sysDeleted);
-            orderSeat.setSysHash(sysHash);
-            orderSeat.setSysAvailData(sysAvailData);
             orderseatDao.save(orderSeat);
             // TODO : 后置代码
         } catch (Exception e){
@@ -74,7 +68,8 @@ public class OrderSeatServiceImpl implements OrderSeatService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveOrderseatBatch (String orderseatJson, String operator){
+    public DataResult<Boolean> saveOrderseatBatch(String orderseatJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(orderseatJson)){
             result.setCode("1");
             result.setCode("1");
@@ -164,11 +159,11 @@ public class OrderSeatServiceImpl implements OrderSeatService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateOrderseat (
-                String id,
-                String orderdetailId,
-                String seatId,
-                String operator
+    public DataResult<Boolean> updateOrderseat(
+            String id,
+            String orderdetailId,
+            String seatId,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){
@@ -180,15 +175,8 @@ public class OrderSeatServiceImpl implements OrderSeatService {
             // TODO : 前置代码
         OrderSeat orderSeat = new OrderSeat();
         orderSeat.setId(id);
-        orderSeat.setOrderdetailId(orderdetailId);
+        orderSeat.setOrderDetailId(orderdetailId);
         orderSeat.setSeatId(seatId);
-        orderSeat.setSysCreateTime(sysCreateTime);
-        orderSeat.setSysCreator(sysCreator);
-        orderSeat.setSysUpdateTime(sysUpdateTime);
-        orderSeat.setSysUpdater(sysUpdater);
-        orderSeat.setSysDeleted(sysDeleted);
-        orderSeat.setSysHash(sysHash);
-        orderSeat.setSysAvailData(sysAvailData);
         orderSeat.setSysUpdater(operator);
         orderseatDao.update(orderSeat);
             // TODO : 后置代码

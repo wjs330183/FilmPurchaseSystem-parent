@@ -5,6 +5,8 @@ package com.ioe.common.domain;
  *@Date 2018/4/24  20:52
  */
 
+import com.ioe.enums.ErrorEnum;
+
 import java.io.Serializable;
 
 public class Result implements Serializable {
@@ -28,8 +30,8 @@ public class Result implements Serializable {
         return this.code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setCode(ErrorEnum errorEnum) {
+        this.code = errorEnum.getErrorinfo();
     }
 
     public String getMessage() {

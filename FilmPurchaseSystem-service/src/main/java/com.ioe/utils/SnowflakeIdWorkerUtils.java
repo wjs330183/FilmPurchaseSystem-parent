@@ -14,7 +14,7 @@ package com.ioe.utils;
 public class SnowflakeIdWorkerUtils {
 
     /** 开始时间截 (2015-01-01) */
-    private final long twepoch = 1420041600000L;
+    private final long twepoch = 1420041600000L;//1525506384625
 
     /** 机器id所占的位数 */
     private final long workerIdBits = 5L;

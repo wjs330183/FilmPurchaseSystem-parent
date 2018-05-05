@@ -1,6 +1,7 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.OrderHeadDao;
+import com.ioe.entity.OrderHead;
 import com.ioe.service.OrderHeadService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,8 +10,8 @@ import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import java.util.*;
-
+import java.util.List;
+import java.sql.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +35,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveOrderhead(
+    public DataResult<String> saveOrderhead(
             String orderheadId,
             Date orderheadBuydate,
             String customerId,
@@ -48,18 +49,11 @@ public class OrderHeadServiceImpl implements OrderHeadService {
         }
         try{
             // TODO : 前置代码
-            Orderhead orderhead = new Orderhead();
+            OrderHead orderhead = new OrderHead();
             orderhead.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
-            orderhead.setOrderheadId(orderheadId);
-            orderhead.setOrderheadBuydate(orderheadBuydate);
+            orderhead.setOrderHeadId(orderheadId);
+            orderhead.setOrderHeadBuyDate(orderheadBuydate);
             orderhead.setCustomerId(customerId);
-            orderhead.setSysCreateTime(sysCreateTime);
-            orderhead.setSysCreator(sysCreator);
-            orderhead.setSysUpdateTime(sysUpdateTime);
-            orderhead.setSysUpdater(sysUpdater);
-            orderhead.setSysDeleted(sysDeleted);
-            orderhead.setSysHash(sysHash);
-            orderhead.setSysAvailData(sysAvailData);
             orderheadDao.save(orderhead);
             // TODO : 后置代码
         } catch (Exception e){
@@ -78,13 +72,14 @@ public class OrderHeadServiceImpl implements OrderHeadService {
 
     @Transactional(rollbackFor = Exception.class)
     DataResult<Boolean> saveOrderheadBatch (String orderheadJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(orderheadJson)){
             result.setCode("1");
             result.setCode("1");
             return result;
         }
         try{
-            List<Orderhead> orderheadList = CommonUtils.getListByJson(orderheadJson, Orderhead.class);
+            List<OrderHead> orderheadList = CommonUtils.getListByJson(orderheadJson, OrderHead.class);
 
             if (CommonUtils.isEmpty(orderheadList)) {
                 result.setCode("1");
@@ -111,8 +106,8 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     */
     @Override
 
-    public ListResult<Orderhead> getOrderheadById (String id, int availData){
-        ListResult<Orderhead> result = new ListResult();
+    public ListResult<OrderHead> getOrderheadById (String id, int availData){
+        ListResult<OrderHead> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
             result.setCode("1");
             result.setCode("1");
@@ -120,7 +115,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
         }
         try{
             // TODO : 前置代码
-            List<Orderhead> orderheadList = orderheadDao.getById(id, availData);
+            List<OrderHead> orderheadList = orderheadDao.getById(id, availData);
             // TODO : 后置代码
             if(CommonUtils.isNotEmpty(orderheadList)){
                 result.setDataList(orderheadList);
@@ -166,14 +161,13 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     * 更新对象
     */
     @Override
-
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateOrderhead (
-                String id,
-                String orderheadId,
-                Date orderheadBuydate,
-                String customerId,
-                String operator
+    public DataResult<Boolean> updateOrderhead(
+            String id,
+            String orderheadId,
+            Date orderheadBuydate,
+            String customerId,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){
@@ -183,20 +177,13 @@ public class OrderHeadServiceImpl implements OrderHeadService {
         }
         try{
             // TODO : 前置代码
-        Orderhead orderhead = new Orderhead();
-        orderhead.setId(id);
-        orderhead.setOrderheadId(orderheadId);
-        orderhead.setOrderheadBuydate(orderheadBuydate);
-        orderhead.setCustomerId(customerId);
-        orderhead.setSysCreateTime(sysCreateTime);
-        orderhead.setSysCreator(sysCreator);
-        orderhead.setSysUpdateTime(sysUpdateTime);
-        orderhead.setSysUpdater(sysUpdater);
-        orderhead.setSysDeleted(sysDeleted);
-        orderhead.setSysHash(sysHash);
-        orderhead.setSysAvailData(sysAvailData);
-        orderhead.setSysUpdater(operator);
-        orderheadDao.update(orderhead);
+            OrderHead orderhead = new OrderHead();
+            orderhead.setId(id);
+            orderhead.setOrderHeadId(orderheadId);
+            orderhead.setOrderHeadBuyDate(orderheadBuydate);
+            orderhead.setCustomerId(customerId);
+            orderhead.setSysUpdater(operator);
+            orderheadDao.update(orderhead);
             // TODO : 后置代码
             result.setData(True);
         } catch (Exception e){
@@ -216,8 +203,8 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     */
     @Override
 
-    public ListResult<Orderhead> getOrderheadByOrderheadId (String orderheadId, int availData){
-        ListResult<Orderhead> result = new ListResult();
+    public ListResult<OrderHead> getOrderheadByOrderheadId (String orderheadId, int availData){
+        ListResult<OrderHead> result = new ListResult();
         //TODO:数据校验
         //if(){
         //    result.setCode("1");
@@ -226,7 +213,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
         //}
         try{
             // TODO : 前置代码
-            List<Orderhead> orderheadList = orderheadDao.getByOrderheadId(orderheadId, availData);
+            List<OrderHead> orderheadList = orderheadDao.getByOrderheadId(orderheadId, availData);
             // TODO : 后置代码
             if(CommonUtils.isNotEmpty(orderheadList)){
                 result.setDataList(orderheadList);

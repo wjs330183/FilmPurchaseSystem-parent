@@ -1,7 +1,9 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.OrderDetailDao;
+import com.ioe.entity.OrderDetail;
 import com.ioe.service.OrderDetailService;
+import com.ioe.utils.CommonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -10,6 +12,8 @@ import javax.annotation.Resource;
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
 import java.math.BigDecimal;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +38,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<String> saveOrderdetail(
+    public DataResult<String> saveOrderdetail(
             String orderdetailId,
             String orderheadId,
             String scheduleId,
@@ -49,19 +53,12 @@ public class OrderDetailServiceImpl implements OrderDetailService {
         }
         try{
             // TODO : 前置代码
-            Orderdetail orderdetail = new Orderdetail();
+            OrderDetail orderdetail = new OrderDetail();
             orderdetail.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
-            orderdetail.setOrderdetailId(orderdetailId);
-            orderdetail.setOrderheadId(orderheadId);
+            orderdetail.setOrderDetailId(orderdetailId);
+            orderdetail.setOrderHeadId(orderheadId);
             orderdetail.setScheduleId(scheduleId);
-            orderdetail.setOrderdetailAdjustedprice(orderdetailAdjustedprice);
-            orderdetail.setSysCreateTime(sysCreateTime);
-            orderdetail.setSysCreator(sysCreator);
-            orderdetail.setSysUpdateTime(sysUpdateTime);
-            orderdetail.setSysUpdater(sysUpdater);
-            orderdetail.setSysDeleted(sysDeleted);
-            orderdetail.setSysHash(sysHash);
-            orderdetail.setSysAvailData(sysAvailData);
+            orderdetail.setOrderdetailAdjustedPrice(orderdetailAdjustedprice);
             orderdetailDao.save(orderdetail);
             // TODO : 后置代码
         } catch (Exception e){
@@ -79,14 +76,15 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveOrderdetailBatch (String orderdetailJson, String operator){
+    public DataResult<Boolean> saveOrderdetailBatch(String orderdetailJson, String operator){
+        DataResult<Boolean> result = new DataResult();
         if(CommonUtils.isEmpty(orderdetailJson)){
             result.setCode("1");
             result.setCode("1");
             return result;
         }
         try{
-            List<Orderdetail> orderdetailList = CommonUtils.getListByJson(orderdetailJson, Orderdetail.class);
+            List<OrderDetail> orderdetailList = CommonUtils.getListByJson(orderdetailJson, Orderdetail.class);
 
             if (CommonUtils.isEmpty(orderdetailList)) {
                 result.setCode("1");
@@ -113,8 +111,8 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     */
     @Override
 
-    public ListResult<Orderdetail> getOrderdetailById (String id, int availData){
-        ListResult<Orderdetail> result = new ListResult();
+    public ListResult<OrderDetail> getOrderdetailById (String id, int availData){
+        ListResult<OrderDetail> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
             result.setCode("1");
             result.setCode("1");
@@ -122,7 +120,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
         }
         try{
             // TODO : 前置代码
-            List<Orderdetail> orderdetailList = orderdetailDao.getById(id, availData);
+            List<OrderDetail> orderdetailList = orderdetailDao.getById(id, availData);
             // TODO : 后置代码
             if(CommonUtils.isNotEmpty(orderdetailList)){
                 result.setDataList(orderdetailList);
@@ -170,13 +168,13 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> updateOrderdetail (
-                String id,
-                String orderdetailId,
-                String orderheadId,
-                String scheduleId,
-                BigDecimal orderdetailAdjustedprice,
-                String operator
+    public DataResult<Boolean> updateOrderdetail(
+            String id,
+            String orderdetailId,
+            String orderheadId,
+            String scheduleId,
+            BigDecimal orderdetailAdjustedprice,
+            String operator
     ){
         DataResult<Boolean> result = new DataResult();
         if(false){
@@ -186,21 +184,14 @@ public class OrderDetailServiceImpl implements OrderDetailService {
         }
         try{
             // TODO : 前置代码
-        Orderdetail orderdetail = new Orderdetail();
-        orderdetail.setId(id);
-        orderdetail.setOrderdetailId(orderdetailId);
-        orderdetail.setOrderheadId(orderheadId);
-        orderdetail.setScheduleId(scheduleId);
-        orderdetail.setOrderdetailAdjustedprice(orderdetailAdjustedprice);
-        orderdetail.setSysCreateTime(sysCreateTime);
-        orderdetail.setSysCreator(sysCreator);
-        orderdetail.setSysUpdateTime(sysUpdateTime);
-        orderdetail.setSysUpdater(sysUpdater);
-        orderdetail.setSysDeleted(sysDeleted);
-        orderdetail.setSysHash(sysHash);
-        orderdetail.setSysAvailData(sysAvailData);
-        orderdetail.setSysUpdater(operator);
-        orderdetailDao.update(orderdetail);
+            OrderDetail orderdetail = new OrderDetail();
+            orderdetail.setId(id);
+            orderdetail.setOrderDetailId(orderdetailId);
+            orderdetail.setOrderHeadId(orderheadId);
+            orderdetail.setScheduleId(scheduleId);
+            orderdetail.setOrderdetailAdjustedPrice(orderdetailAdjustedprice);
+            orderdetail.setSysUpdater(operator);
+            orderdetailDao.update(orderdetail);
             // TODO : 后置代码
             result.setData(True);
         } catch (Exception e){
