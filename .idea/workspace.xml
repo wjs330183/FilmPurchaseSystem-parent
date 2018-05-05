@@ -3,35 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/common/domain/Result.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/common/domain/Result.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/Class.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderDetail.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/entity/OrderDetail.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/src/main/java/com/ioe/service/ClassService.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/entity/Class.class" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDao.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/dao/ClassDao.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/enums/ErrorEnum.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/enums/TypeEnum.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderDetailServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderDetailServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderHeadServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderHeadServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderSeatServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderSeatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ScheduleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/CommonUtils.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/SnowflakeIdWorkerUtils.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/SnowflakeIdWorkerUtils.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/HallMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/HallMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/MovieMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/MovieMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderDetailMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderDetailMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderHeadMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderHeadMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderSeatMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderSeatMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ScheduleMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ScheduleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/SeatMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/SeatMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <marker date="1525529994481" expanded="true" signature="1666:2184" ph="insert into " />
                 <marker date="1525529994481" expanded="true" signature="2998:3124" ph="select from where" />
@@ -974,7 +947,8 @@
     <MESSAGE value="代码生成" />
     <MESSAGE value="代码生成420" />
     <MESSAGE value="整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="整理" />
+    <MESSAGE value="删除availData" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除availData" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1227,8 +1201,8 @@
         <state relative-caret-position="437">
           <caret line="77" column="35" lean-forward="false" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="35" />
           <folding>
-            <element signature="e#3686#3687#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
+            <element signature="e#3686#3687#0" expanded="false" />
+            <element signature="e#3735#3736#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1278,8 +1252,8 @@
         <state relative-caret-position="171">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1305,8 +1279,8 @@
         <state relative-caret-position="351">
           <caret line="212" column="26" lean-forward="true" selection-start-line="212" selection-start-column="26" selection-end-line="212" selection-end-column="26" />
           <folding>
-            <element signature="e#2593#2601#0" expanded="true" />
-            <element signature="e#2897#2905#0" expanded="true" />
+            <element signature="e#2593#2601#0" expanded="false" />
+            <element signature="e#2897#2905#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1330,7 +1304,7 @@
     <entry file="file://$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <marker date="1525529994481" expanded="true" signature="1666:2184" ph="insert into " />
             <marker date="1525529994481" expanded="true" signature="2998:3124" ph="select from where" />
