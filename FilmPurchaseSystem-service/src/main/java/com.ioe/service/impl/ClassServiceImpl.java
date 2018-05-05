@@ -121,9 +121,8 @@ public class ClassServiceImpl implements ClassService {
 
             List<Class> classList = classDao.getById(id);
 
-            if (CommonUtils.isNotEmpty(classList)) {
-                result.setDataList(classList);
-            }
+            result.setDataList(classList);
+
         } catch (Exception e) {
             logger.error("saveClassById error:{}", e.getMessage());
             result.setCode(ErrorEnum.GET_ERROR);
@@ -184,10 +183,11 @@ public class ClassServiceImpl implements ClassService {
             aclass.setClassName(className);
             aclass.setClassDiscount(new BigDecimal(classDiscount));
             aclass.setClassIsactive(classIsactive);
-            aclass.setSysCreator(operator);
             aclass.setSysUpdater(operator);
+
             int count = classDao.update(aclass);
             result.setData(count);
+
         } catch (Exception e) {
             logger.error("updateClass error:{}", e.getMessage());
             result.setCode(ErrorEnum.UPDETE_ERROR);
@@ -210,16 +210,15 @@ public class ClassServiceImpl implements ClassService {
            return result;
        }
         try {
-            // TODO : 前置代码
+
             List<Class> classList = classDao.getByClassId(classId);
-            // TODO : 后置代码
-            if (CommonUtils.isNotEmpty(classList)) {
-                result.setDataList(classList);
-            }
+
+            result.setDataList(classList);
+
         } catch (Exception e) {
             logger.error("getClassByClassId error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getClassByClassId is error");
         }
         return result;
     }

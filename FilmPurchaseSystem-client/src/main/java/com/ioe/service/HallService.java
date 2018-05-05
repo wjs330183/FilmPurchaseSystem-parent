@@ -27,13 +27,13 @@ public interface HallService {
     * @param hallJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveHallBatch(String hallJson, String operator);
+    ListResult<String>  saveHallBatch(String hallJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Hall> getHallById (String id, int availData);
+    ListResult<Hall> getHallById (String id);
 
     /**
     * 根据id删除对象
@@ -52,7 +52,7 @@ public interface HallService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateHall(String id, String hallId, String hallSeats, String hallDescription, String operator);
+    DataResult<Integer> updateHall(String id, String hallId, String hallSeats, String hallDescription, String operator);
 
     /**
     * 根据hallId查询记录
@@ -60,6 +60,6 @@ public interface HallService {
         * @param hallId 放映厅ID号
 	
     */
-    ListResult<Hall> getHallByHallId (String hallId, int availData);
+    ListResult<Hall> getHallByHallId (String hallId);
 
 }

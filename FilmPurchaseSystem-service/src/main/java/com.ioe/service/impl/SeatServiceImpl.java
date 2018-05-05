@@ -1,26 +1,32 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.SeatDao;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.SeatService;
 import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+
 import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
+
 import java.util.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.ioe.entity.Seat;
 
 /**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
+ * 描述：
+ *
+ * @author wangjs
+ * @date 2018-04-19
+ */
 @Service("seatService")
 public class SeatServiceImpl implements SeatService {
 
@@ -28,10 +34,12 @@ public class SeatServiceImpl implements SeatService {
 
     @Resource
     private SeatDao seatDao;
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
-    * 单个保存
-    */
+     * 单个保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public DataResult<String> saveSeat(
@@ -41,132 +49,124 @@ public class SeatServiceImpl implements SeatService {
             String seatColumn,
             String seatIsactive,
             String operator
-    ){
+    ) {
         DataResult<String> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(seatId, hallId, seatRow, seatColumn, seatIsactive, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
+        try {
             Seat seat = new Seat();
-            seat.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            seat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             seat.setSeatId(seatId);
             seat.setHallId(hallId);
             seat.setSeatRow(seatRow);
             seat.setSeatColumn(seatColumn);
             seat.setSeatIsactive(seatIsactive);
+            seat.setSysCreator(operator);
+            seat.setSysUpdater(operator);
             seatDao.save(seat);
             // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveSeat error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveSeat is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 批量保存
-    */
+     * 批量保存
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> saveSeatBatch(String seatJson, String operator){
-        DataResult<Boolean> result = new DataResult();
-        if(CommonUtils.isEmpty(seatJson)){
-            result.setCode("1");
-            result.setCode("1");
+    public ListResult<String> saveSeatBatch(String seatJson, String operator) {
+        ListResult<String> result = new ListResult<String>();
+        if (CommonUtils.isEmpty(seatJson)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             List<Seat> seatList = CommonUtils.getListByJson(seatJson, Seat.class);
 
-            if (CommonUtils.isEmpty(seatList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
+            List<String> ids = new ArrayList<String>();
+            for (Seat seat : seatList) {
+                seat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                ids.add(seat.getId());
             }
-
-            // TODO : 前置代码
             seatDao.saveBatch(seatList);
-            result.setData(True);
+            result.setDataList(ids);
 
-            // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveSeatBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveSeatBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据id获取对象
-    */
+     * 根据id获取对象
+     */
     @Override
 
-    public ListResult<Seat> getSeatById (String id, int availData){
+    public ListResult<Seat> getSeatById(String id) {
         ListResult<Seat> result = new ListResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isEmpty(id)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-            List<Seat> seatList = seatDao.getById(id, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(seatList)){
+        try {
+
+            List<Seat> seatList = seatDao.getById(id);
+
                 result.setDataList(seatList);
-            }
-        } catch (Exception e){
-            logger.error("saveSeatById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+
+        } catch (Exception e) {
+            logger.error("getSeatById error:{}", e.getMessage());
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("getSeatById is error");
         }
         return result;
     }
 
     /**
-    * 根据id删除对象
-    */
+     * 根据id删除对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Integer> deleteSeatById(String id, String operator){
+    public DataResult<Integer> deleteSeatById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(id,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        int count = seatDao.deleteById(id, operator);
-            // TODO : 后置代码
+        try {
+
+            int count = seatDao.deleteById(id, operator);
+
             result.setData(count);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("deleteSeatById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteSeatById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
 
-
     /**
-    * 更新对象
-    */
+     * 更新对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> updateSeat(
+    public DataResult<Integer> updateSeat(
             String id,
             String seatId,
             String hallId,
@@ -174,62 +174,58 @@ public class SeatServiceImpl implements SeatService {
             String seatColumn,
             String seatIsactive,
             String operator
-    ){
-        DataResult<Boolean> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+    ) {
+        DataResult<Integer> result = new DataResult();
+        if (CommonUtils.isAnyEmpty(id,seatId,hallId,seatRow,seatColumn,seatIsactive,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        Seat seat = new Seat();
-        seat.setId(id);
-        seat.setSeatId(seatId);
-        seat.setHallId(hallId);
-        seat.setSeatRow(seatRow);
-        seat.setSeatColumn(seatColumn);
-        seat.setSeatIsactive(seatIsactive);
-        seat.setSysUpdater(operator);
-        seatDao.update(seat);
-            // TODO : 后置代码
-            result.setData(True);
-        } catch (Exception e){
+        try {
+            Seat seat = new Seat();
+            seat.setId(id);
+            seat.setSeatId(seatId);
+            seat.setHallId(hallId);
+            seat.setSeatRow(seatRow);
+            seat.setSeatColumn(seatColumn);
+            seat.setSeatIsactive(seatIsactive);
+            seat.setSysUpdater(operator);
+
+            int count = seatDao.update(seat);
+            result.setData(count);
+
+        } catch (Exception e) {
             logger.error("updateSeat error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateSeat is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据seatId查询记录
-    *
-    * @param seatId 座位ID
-	
-    */
+     * 根据seatId查询记录
+     *
+     * @param seatId 座位ID
+     */
     @Override
 
-    public ListResult<Seat> getSeatBySeatId (String seatId, int availData){
+    public ListResult<Seat> getSeatBySeatId(String seatId) {
         ListResult<Seat> result = new ListResult();
-        //TODO:数据校验
-        //if(){
-        //    result.setCode("1");
-        //    result.setCode("1");
-        //    return result;
-        //}
-        try{
-            // TODO : 前置代码
-            List<Seat> seatList = seatDao.getBySeatId(seatId, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(seatList)){
+        if (CommonUtils.isEmpty(seatId)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
+            return result;
+        }
+        try {
+
+            List<Seat> seatList = seatDao.getBySeatId(seatId);
+
+
                 result.setDataList(seatList);
-            }
-        } catch (Exception e){
+
+        } catch (Exception e) {
             logger.error("getSeatBySeatId error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getSeatBySeatId is error");
         }
         return result;
     }

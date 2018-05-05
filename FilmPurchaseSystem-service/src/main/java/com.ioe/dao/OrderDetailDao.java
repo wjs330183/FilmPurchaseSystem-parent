@@ -18,10 +18,12 @@ public interface OrderDetailDao {
 
     int update(@Param("entity")OrderDetail entity);
 
-    List<OrderDetail> getById (@Param("id")String id, @Param("availData")int availData);
+    List<OrderDetail> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
+
+    List<OrderDetail> getByOrderdetailId (String orderdetailId);
 
 
 }

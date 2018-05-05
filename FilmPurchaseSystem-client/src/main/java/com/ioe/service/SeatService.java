@@ -30,13 +30,13 @@ public interface SeatService {
     * @param seatJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveSeatBatch(String seatJson, String operator);
+    ListResult<String> saveSeatBatch(String seatJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Seat> getSeatById (String id, int availData);
+    ListResult<Seat> getSeatById (String id);
 
     /**
     * 根据id删除对象
@@ -57,7 +57,7 @@ public interface SeatService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateSeat(String id, String seatId, String hallId, String seatRow, String seatColumn, String seatIsactive, String operator);
+    DataResult<Integer> updateSeat(String id, String seatId, String hallId, String seatRow, String seatColumn, String seatIsactive, String operator);
 
     /**
     * 根据seatId查询记录
@@ -65,6 +65,6 @@ public interface SeatService {
         * @param seatId 座位ID
 	
     */
-    ListResult<Seat> getSeatBySeatId (String seatId, int availData);
+    ListResult<Seat> getSeatBySeatId (String seatId);
 
 }

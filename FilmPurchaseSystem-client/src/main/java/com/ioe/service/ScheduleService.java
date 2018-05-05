@@ -23,20 +23,20 @@ public interface ScheduleService {
 	
     * @param operator 操作者编号
     */
-     DataResult<String>saveSchedule(String scheduleId, String movieId, String hallId, BigDecimal schedulePrice, String scheduleBegindatetime,  String operator);
+     DataResult<String>saveSchedule(String scheduleId, String movieId, String hallId, String schedulePrice, String scheduleBegindatetime,  String operator);
 
     /**
     * 批量保存
     * @param scheduleJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveScheduleBatch(String scheduleJson, String operator);
+    ListResult<String> saveScheduleBatch(String scheduleJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Schedule> getScheduleById (String id, int availData);
+    ListResult<Schedule> getScheduleById (String id);
 
     /**
     * 根据id删除对象
@@ -57,7 +57,7 @@ public interface ScheduleService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateSchedule(String id, String scheduleId, String movieId, String hallId, BigDecimal schedulePrice, String scheduleBegindatetime, String operator);
+    DataResult<Integer> updateSchedule(String id, String scheduleId, String movieId, String hallId, String schedulePrice, String scheduleBegindatetime, String operator);
 
     /**
     * 根据scheduleId查询记录
@@ -65,6 +65,6 @@ public interface ScheduleService {
         * @param scheduleId 电影时间表ID
 	
     */
-    ListResult<Schedule> getScheduleByScheduleId (String scheduleId, int availData);
+    ListResult<Schedule> getScheduleByScheduleId (String scheduleId);
 
 }

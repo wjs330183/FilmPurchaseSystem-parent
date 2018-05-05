@@ -22,20 +22,20 @@ public interface OrderDetailService {
 	
     * @param operator 操作者编号
     */
-     DataResult<String>saveOrderdetail(String orderdetailId, String orderheadId, String scheduleId, BigDecimal orderdetailAdjustedprice,  String operator);
+     DataResult<String>saveOrderdetail(String orderdetailId, String orderheadId, String scheduleId, String orderdetailAdjustedprice,  String operator);
 
     /**
     * 批量保存
     * @param orderdetailJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveOrderdetailBatch(String orderdetailJson, String operator);
+    ListResult<String>  saveOrderdetailBatch(String orderdetailJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<OrderDetail> getOrderdetailById (String id, int availData);
+    ListResult<OrderDetail> getOrderdetailById (String id);
 
     /**
     * 根据id删除对象
@@ -55,6 +55,13 @@ public interface OrderDetailService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateOrderdetail(String id, String orderdetailId, String orderheadId, String scheduleId, BigDecimal orderdetailAdjustedprice, String operator);
+    DataResult<Integer> updateOrderdetail(String id, String orderdetailId, String orderheadId, String scheduleId, String orderdetailAdjustedprice, String operator);
 
+    /**
+     * 根据orderdetailId查询记录
+     *
+     * @param orderdetailId 订单ID
+
+     */
+    ListResult<OrderDetail> getOrderdetailByOrderdetailId (String orderdetailId);
 }

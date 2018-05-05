@@ -2,7 +2,10 @@ package com.ioe.service.impl;
 
 import com.ioe.dao.OrderHeadDao;
 import com.ioe.entity.OrderHead;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.OrderHeadService;
+import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -10,7 +13,7 @@ import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
-import java.util.List;
+import java.util.*;
 import java.sql.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +31,12 @@ public class OrderHeadServiceImpl implements OrderHeadService {
 
     @Resource
     private OrderHeadDao orderheadDao;
-
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
     /**
     * 单个保存
     */
     @Override
-
     @Transactional(rollbackFor = Exception.class)
     public DataResult<String> saveOrderhead(
             String orderheadId,
@@ -42,24 +45,23 @@ public class OrderHeadServiceImpl implements OrderHeadService {
             String operator
     ){
         DataResult<String> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(orderheadId,customerId,operator)&&(orderheadBuydate==null)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try{
-            // TODO : 前置代码
             OrderHead orderhead = new OrderHead();
-            orderhead.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            orderhead.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             orderhead.setOrderHeadId(orderheadId);
             orderhead.setOrderHeadBuyDate(orderheadBuydate);
             orderhead.setCustomerId(customerId);
+            orderhead.setSysCreator(operator);
+            orderhead.setSysUpdater(operator);
             orderheadDao.save(orderhead);
-            // TODO : 后置代码
         } catch (Exception e){
             logger.error("saveOrderhead error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveOrderhead is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -71,31 +73,26 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    DataResult<Boolean> saveOrderheadBatch (String orderheadJson, String operator){
-        DataResult<Boolean> result = new DataResult();
+    public ListResult<String>  saveOrderheadBatch(String orderheadJson, String operator){
+        ListResult<String>  result = new ListResult<String> ();
         if(CommonUtils.isEmpty(orderheadJson)){
-            result.setCode("1");
-            result.setCode("1");
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try{
             List<OrderHead> orderheadList = CommonUtils.getListByJson(orderheadJson, OrderHead.class);
 
-            if (CommonUtils.isEmpty(orderheadList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
+            List<String> ids = new ArrayList<String>();
+            for (OrderHead orderHead : orderheadList) {
+                orderHead.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                ids.add(orderHead.getId());
             }
-
-            // TODO : 前置代码
             orderheadDao.saveBatch(orderheadList);
-            result.setData(True);
-
-            // TODO : 后置代码
+            result.setDataList(ids);
         } catch (Exception e){
             logger.error("saveOrderheadBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveOrderheadBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -106,24 +103,22 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     */
     @Override
 
-    public ListResult<OrderHead> getOrderheadById (String id, int availData){
+    public ListResult<OrderHead> getOrderheadById (String id){
         ListResult<OrderHead> result = new ListResult();
         if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try{
-            // TODO : 前置代码
-            List<OrderHead> orderheadList = orderheadDao.getById(id, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(orderheadList)){
+
+            List<OrderHead> orderheadList = orderheadDao.getById(id);
+
                 result.setDataList(orderheadList);
-            }
+
         } catch (Exception e){
             logger.error("saveOrderheadById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("saveOrderheadById is error");
         }
         return result;
     }
@@ -136,20 +131,19 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteOrderheadById(String id, String operator){
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(id,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try{
-            // TODO : 前置代码
+
         int count = orderheadDao.deleteById(id, operator);
-            // TODO : 后置代码
+
             result.setData(count);
         } catch (Exception e){
             logger.error("deleteOrderheadById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteOrderheadById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -162,34 +156,33 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> updateOrderhead(
+    public DataResult<Integer> updateOrderhead(
             String id,
             String orderheadId,
             Date orderheadBuydate,
             String customerId,
             String operator
     ){
-        DataResult<Boolean> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+        DataResult<Integer> result = new DataResult();
+        if (CommonUtils.isAnyEmpty(id,orderheadId,customerId,operator)&&(orderheadBuydate == null)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try{
-            // TODO : 前置代码
+
             OrderHead orderhead = new OrderHead();
             orderhead.setId(id);
             orderhead.setOrderHeadId(orderheadId);
             orderhead.setOrderHeadBuyDate(orderheadBuydate);
             orderhead.setCustomerId(customerId);
             orderhead.setSysUpdater(operator);
-            orderheadDao.update(orderhead);
-            // TODO : 后置代码
-            result.setData(True);
+            int count = orderheadDao.update(orderhead);
+
+            result.setData(count);
         } catch (Exception e){
             logger.error("updateOrderhead error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateOrderhead is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -203,25 +196,23 @@ public class OrderHeadServiceImpl implements OrderHeadService {
     */
     @Override
 
-    public ListResult<OrderHead> getOrderheadByOrderheadId (String orderheadId, int availData){
+    public ListResult<OrderHead> getOrderheadByOrderheadId (String orderheadId){
         ListResult<OrderHead> result = new ListResult();
-        //TODO:数据校验
-        //if(){
-        //    result.setCode("1");
-        //    result.setCode("1");
-        //    return result;
-        //}
+        if (CommonUtils.isEmpty(orderheadId)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
+            return result;
+        }
         try{
-            // TODO : 前置代码
-            List<OrderHead> orderheadList = orderheadDao.getByOrderheadId(orderheadId, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(orderheadList)){
+
+            List<OrderHead> orderheadList = orderheadDao.getByOrderheadId(orderheadId);
+
+
                 result.setDataList(orderheadList);
-            }
+
         } catch (Exception e){
             logger.error("getOrderheadByOrderheadId error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getOrderheadByOrderheadId is error");
         }
         return result;
     }

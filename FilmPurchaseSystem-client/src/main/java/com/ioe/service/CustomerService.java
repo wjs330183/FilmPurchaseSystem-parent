@@ -30,13 +30,13 @@ public interface CustomerService {
     * @param customerJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveCustomerBatch(String customerJson, String operator);
+    ListResult<String>saveCustomerBatch(String customerJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Customer> getCustomerById (String id, int availData);
+    ListResult<Customer> getCustomerById (String id);
 
     /**
     * 根据id删除对象
@@ -57,7 +57,7 @@ public interface CustomerService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateCustomer(String id, String customerId, String customerName, String customerEmail, String customerMobile, String classId, String operator);
+    DataResult<Integer> updateCustomer(String id, String customerId, String customerName, String customerEmail, String customerMobile, String classId, String operator);
 
     /**
     * 根据customerId查询记录
@@ -65,6 +65,6 @@ public interface CustomerService {
         * @param customerId 用户ID
 	
     */
-    ListResult<Customer> getCustomerByCustomerId (String customerId, int availData);
+    ListResult<Customer> getCustomerByCustomerId (String customerId);
 
 }

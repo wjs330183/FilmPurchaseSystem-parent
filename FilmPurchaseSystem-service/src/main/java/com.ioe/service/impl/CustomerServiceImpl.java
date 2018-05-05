@@ -1,8 +1,10 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.CustomerDao;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.CustomerService;
 import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,6 +36,8 @@ public class CustomerServiceImpl implements CustomerService {
     @Resource
     private CustomerDao customerDao;
 
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
     /**
      * 单个保存
      */
@@ -48,26 +52,25 @@ public class CustomerServiceImpl implements CustomerService {
             String operator
     ) {
         DataResult<String> result = new DataResult();
-        if (StringUtils.isEmpty()) {
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(customerId,customerName,customerEmail,customerMobile,classId,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try {
-            // TODO : 前置代码
             Customer customer = new Customer();
-            customer.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            customer.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             customer.setCustomerId(customerId);
             customer.setCustomerName(customerName);
             customer.setCustomerEmail(customerEmail);
             customer.setCustomerMobile(customerMobile);
             customer.setClassId(classId);
+            customer.setSysCreator(operator);
+            customer.setSysUpdater(operator);
             customerDao.save(customer);
-            // TODO : 后置代码
         } catch (Exception e) {
             logger.error("saveCustomer error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveCustomer is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -78,31 +81,27 @@ public class CustomerServiceImpl implements CustomerService {
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> saveCustomerBatch(String customerJson, String operator) {
-        DataResult<Boolean> result = new DataResult();
-        if (CommonUtils.isEmpty(customerJson)) {
-            result.setCode("1");
-            result.setCode("1");
+    public ListResult<String> saveCustomerBatch(String customerJson, String operator) {
+
+        ListResult<String> result = new ListResult<String>();
+        if (CommonUtils.isAnyEmpty(customerJson,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try {
             List<Customer> customerList = CommonUtils.getListByJson(customerJson, Customer.class);
 
-            if (CommonUtils.isEmpty(customerList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
+            List<String> ids = new ArrayList<String>();
+            for (Customer customer : customerList) {
+                customer.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                ids.add(customer.getId());
             }
-
-            // TODO : 前置代码
             customerDao.saveBatch(customerList);
-            result.setData(True);
-
-            // TODO : 后置代码
+            result.setDataList(ids);
         } catch (Exception e) {
             logger.error("saveCustomerBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveCustomerBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -112,24 +111,22 @@ public class CustomerServiceImpl implements CustomerService {
      * 根据id获取对象
      */
     @Override
-    public ListResult<Customer> getCustomerById(String id, int availData) {
+    public ListResult<Customer> getCustomerById(String id) {
         ListResult<Customer> result = new ListResult();
         if (CommonUtils.isEmpty(id)) {
-            result.setCode("1");
-            result.setCode("1");
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try {
-            // TODO : 前置代码
-            List<Customer> customerList = customerDao.getById(id, availData);
-            // TODO : 后置代码
-            if (CommonUtils.isNotEmpty(customerList)) {
-                result.setDataList(customerList);
-            }
+            List<Customer> customerList = customerDao.getById(id);
+
+
+            result.setDataList(customerList);
+
         } catch (Exception e) {
             logger.error("saveCustomerById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("getCustomerById is error");
         }
         return result;
     }
@@ -141,20 +138,19 @@ public class CustomerServiceImpl implements CustomerService {
     @Transactional(rollbackFor = Exception.class)
     public DataResult<Integer> deleteCustomerById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if (CommonUtils.isEmpty(id)) {
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(id,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
         try {
-            // TODO : 前置代码
+
             int count = customerDao.deleteById(id, operator);
-            // TODO : 后置代码
+
             result.setData(count);
         } catch (Exception e) {
             logger.error("deleteCustomerById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteCustomerById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -166,7 +162,7 @@ public class CustomerServiceImpl implements CustomerService {
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> updateCustomer(
+    public DataResult<Integer> updateCustomer(
             String id,
             String customerId,
             String customerName,
@@ -175,14 +171,14 @@ public class CustomerServiceImpl implements CustomerService {
             String classId,
             String operator
     ) {
-        DataResult<Boolean> result = new DataResult();
-        if (false) {
-            result.setCode("1");
-            result.setCode("1");
+        DataResult<Integer> result = new DataResult();
+        if (CommonUtils.isAnyEmpty(id,customerId,customerName,customerEmail,customerMobile,classId,operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
+
         try {
-            // TODO : 前置代码
+
             Customer customer = new Customer();
             customer.setId(id);
             customer.setCustomerId(customerId);
@@ -190,13 +186,15 @@ public class CustomerServiceImpl implements CustomerService {
             customer.setCustomerEmail(customerEmail);
             customer.setCustomerMobile(customerMobile);
             customer.setClassId(classId);
-            customerDao.update(customer);
-            // TODO : 后置代码
-            result.setData(True);
+            customer.setSysUpdater(operator);
+
+            int count = customerDao.update(customer);
+            result.setData(count);
+
         } catch (Exception e) {
             logger.error("updateCustomer error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateCustomer is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
@@ -208,25 +206,23 @@ public class CustomerServiceImpl implements CustomerService {
      * @param customerId 用户ID
      */
     @Override
-    public ListResult<Customer> getCustomerByCustomerId(String customerId, int availData) {
+    public ListResult<Customer> getCustomerByCustomerId(String customerId) {
         ListResult<Customer> result = new ListResult();
-        //TODO:数据校验
-        //if(){
-        //    result.setCode("1");
-        //    result.setCode("1");
-        //    return result;
-        //}
+        if(CommonUtils.isEmpty(customerId)){
+            result.setCode(ErrorEnum.EMPTY_ERROR);
+            return result;
+        }
         try {
-            // TODO : 前置代码
-            List<Customer> customerList = customerDao.getByCustomerId(customerId, availData);
-            // TODO : 后置代码
-            if (CommonUtils.isNotEmpty(customerList)) {
-                result.setDataList(customerList);
-            }
+
+            List<Customer> customerList = customerDao.getByCustomerId(customerId);
+
+
+            result.setDataList(customerList);
+
         } catch (Exception e) {
             logger.error("getCustomerByCustomerId error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getCustomerByCustomerId is error");
         }
         return result;
     }

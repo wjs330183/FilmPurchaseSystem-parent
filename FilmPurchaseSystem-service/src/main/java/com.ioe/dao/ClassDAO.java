@@ -18,7 +18,7 @@ public interface ClassDao {
 
     int update(@Param("entity")Class entity);
 
-    List<Class> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Class> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface ClassDao {
     /**
     * index:t_cjlu_class ==> Class_ID_UNIQUE
     */
-    List<Class> getByClassId (String classId, @Param("availData")int availData);
+    List<Class> getByClassId (String classId);
 
 }

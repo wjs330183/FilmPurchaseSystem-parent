@@ -18,7 +18,7 @@ public interface MovieDao {
 
     int update(@Param("entity")Movie entity);
 
-    List<Movie> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Movie> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface MovieDao {
     /**
     * index:t_cjlu_movie ==> Movie_ID_UNIQUE
     */
-    List<Movie> getByMovieId (String movieId, @Param("availData")int availData);
+    List<Movie> getByMovieId (String movieId);
 
 }

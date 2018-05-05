@@ -1,15 +1,19 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.OrderSeatDao;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.OrderSeatService;
 import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+
 import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
+
 import java.util.*;
 
 import org.slf4j.Logger;
@@ -18,10 +22,11 @@ import org.slf4j.LoggerFactory;
 import com.ioe.entity.OrderSeat;
 
 /**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
+ * 描述：
+ *
+ * @author wangjs
+ * @date 2018-04-19
+ */
 @Service("orderseatService")
 public class OrderSeatServiceImpl implements OrderSeatService {
 
@@ -29,165 +34,189 @@ public class OrderSeatServiceImpl implements OrderSeatService {
 
     @Resource
     private OrderSeatDao orderseatDao;
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
-    * 单个保存
-    */
+     * 单个保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public DataResult<String> saveOrderseat(
             String orderdetailId,
             String seatId,
             String operator
-    ){
+    ) {
         DataResult<String> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(orderdetailId, seatId, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
+        try {
+
             OrderSeat orderSeat = new OrderSeat();
-            orderSeat.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            orderSeat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             orderSeat.setOrderDetailId(orderdetailId);
             orderSeat.setSeatId(seatId);
+            orderSeat.setSysCreator(operator);
+            orderSeat.setSysUpdater(operator);
             orderseatDao.save(orderSeat);
-            // TODO : 后置代码
-        } catch (Exception e){
+
+        } catch (Exception e) {
             logger.error("saveOrderseat error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveOrderseat is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 批量保存
-    */
+     * 批量保存
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> saveOrderseatBatch(String orderseatJson, String operator){
-        DataResult<Boolean> result = new DataResult();
-        if(CommonUtils.isEmpty(orderseatJson)){
-            result.setCode("1");
-            result.setCode("1");
+    public ListResult<String> saveOrderseatBatch(String orderseatJson, String operator) {
+        ListResult<String> result = new ListResult<String>();
+        if (CommonUtils.isEmpty(orderseatJson)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             List<OrderSeat> orderSeatList = CommonUtils.getListByJson(orderseatJson, OrderSeat.class);
 
-            if (CommonUtils.isEmpty(orderSeatList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
+            List<String> ids = new ArrayList<String>();
+            for (OrderSeat orderseat : orderSeatList) {
+                orderseat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                ids.add(orderseat.getId());
             }
 
-            // TODO : 前置代码
             orderseatDao.saveBatch(orderSeatList);
-            result.setData(True);
+            result.setDataList(ids);
 
-            // TODO : 后置代码
-        } catch (Exception e){
+
+        } catch (Exception e) {
             logger.error("saveOrderseatBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveOrderseatBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据id获取对象
-    */
+     * 根据id获取对象
+     */
     @Override
-    public ListResult<OrderSeat> getOrderseatById (String id, int availData){
+    public ListResult<OrderSeat> getOrderseatById(String id) {
         ListResult<OrderSeat> result = new ListResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isEmpty(id)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-            List<OrderSeat> orderSeatList = orderseatDao.getById(id, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(orderSeatList)){
-                result.setDataList(orderSeatList);
-            }
-        } catch (Exception e){
+        try {
+
+            List<OrderSeat> orderSeatList = orderseatDao.getById(id);
+
+
+            result.setDataList(orderSeatList);
+
+        } catch (Exception e) {
             logger.error("saveOrderseatById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("saveOrderseatById is error");
         }
         return result;
     }
 
     /**
-    * 根据id删除对象
-    */
+     * 根据id删除对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Integer> deleteOrderseatById(String id, String operator){
+    public DataResult<Integer> deleteOrderseatById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(id, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        int count = orderseatDao.deleteById(id, operator);
-            // TODO : 后置代码
+        try {
+
+            int count = orderseatDao.deleteById(id, operator);
+
             result.setData(count);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("deleteOrderseatById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteOrderseatById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
 
-
     /**
-    * 更新对象
-    */
+     * 更新对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> updateOrderseat(
+    public DataResult<Integer> updateOrderseat(
             String id,
             String orderdetailId,
             String seatId,
             String operator
-    ){
-        DataResult<Boolean> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+    ) {
+        DataResult<Integer> result = new DataResult();
+        if (CommonUtils.isAnyEmpty(id, orderdetailId, seatId, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        OrderSeat orderSeat = new OrderSeat();
-        orderSeat.setId(id);
-        orderSeat.setOrderDetailId(orderdetailId);
-        orderSeat.setSeatId(seatId);
-        orderSeat.setSysUpdater(operator);
-        orderseatDao.update(orderSeat);
-            // TODO : 后置代码
-            result.setData(True);
-        } catch (Exception e){
+        try {
+
+            OrderSeat orderSeat = new OrderSeat();
+            orderSeat.setId(id);
+            orderSeat.setOrderDetailId(orderdetailId);
+            orderSeat.setSeatId(seatId);
+            orderSeat.setSysUpdater(operator);
+            int count = orderseatDao.update(orderSeat);
+
+            result.setData(count);
+        } catch (Exception e) {
             logger.error("updateOrderseat error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateOrderseat is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
+
+    /**
+     * 根据orderseatId查询记录
+     *
+     * @param orderseatId 订单ID
+
+     */
+    @Override
+    public ListResult<OrderSeat> getOrderSeatByOrderseatId (String orderseatId){
+        ListResult<OrderSeat> result = new ListResult();
+        if (CommonUtils.isEmpty(orderseatId)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
+            return result;
+        }
+        try{
+
+            List<OrderSeat> orderheadList = orderseatDao.getByOrderseatId(orderseatId);
+
+            result.setDataList(orderheadList);
+
+        } catch (Exception e){
+            logger.error("getOrderSeatByOrderseatId error:{}", e.getMessage());
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getOrderSeatByOrderseatId is error");
+        }
+        return result;
+    }
 }

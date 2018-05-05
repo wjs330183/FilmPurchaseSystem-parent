@@ -18,7 +18,7 @@ public interface HallDao {
 
     int update(@Param("entity")Hall entity);
 
-    List<Hall> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Hall> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface HallDao {
     /**
     * index:t_cjlu_hall ==> Hall_ID_UNIQUE
     */
-    List<Hall> getByHallId (String hallId, @Param("availData")int availData);
+    List<Hall> getByHallId (String hallId);
 
 }

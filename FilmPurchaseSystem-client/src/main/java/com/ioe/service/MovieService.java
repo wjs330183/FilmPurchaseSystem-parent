@@ -4,7 +4,7 @@ import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
 import com.ioe.entity.Movie;
 import java.util.*;
-
+import java.sql.Date;
 /**
 * 描述： 服务实现层接口
 * @author wangjs
@@ -32,13 +32,13 @@ public interface MovieService {
     * @param movieJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveMovieBatch(String movieJson, String operator);
+	ListResult<String> saveMovieBatch(String movieJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<Movie> getMovieById (String id, int availData);
+    ListResult<Movie> getMovieById (String id);
 
     /**
     * 根据id删除对象
@@ -61,7 +61,7 @@ public interface MovieService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateMovie(String id, String movieId, String movieName, String movieMainactor, String movieDirector, Date movieRelease, Date movieEnantiomer, String movieDescription, String operator);
+    DataResult<Integer> updateMovie(String id, String movieId, String movieName, String movieMainactor, String movieDirector, Date movieRelease, Date movieEnantiomer, String movieDescription, String operator);
 
     /**
     * 根据movieId查询记录
@@ -69,6 +69,6 @@ public interface MovieService {
         * @param movieId 电影ID
 	
     */
-    ListResult<Movie> getMovieByMovieId (String movieId, int availData);
+    ListResult<Movie> getMovieByMovieId (String movieId);
 
 }

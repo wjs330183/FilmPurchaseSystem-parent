@@ -18,7 +18,7 @@ public interface ScheduleDao {
 
     int update(@Param("entity")Schedule entity);
 
-    List<Schedule> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Schedule> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface ScheduleDao {
     /**
     * index:t_cjlu_schedule ==> Schedule_ID_UNIQUE
     */
-    List<Schedule> getByScheduleId (String scheduleId, @Param("availData")int availData);
+    List<Schedule> getByScheduleId (String scheduleId);
 
 }

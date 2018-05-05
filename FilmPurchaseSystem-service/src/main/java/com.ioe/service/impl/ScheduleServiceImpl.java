@@ -1,26 +1,33 @@
 package com.ioe.service.impl;
 
 import com.ioe.dao.ScheduleDao;
+import com.ioe.enums.ErrorEnum;
 import com.ioe.service.ScheduleService;
+import com.ioe.utils.CommonUtils;
+import com.ioe.utils.SnowflakeIdWorkerUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+
 import javax.annotation.Resource;
 
 import com.ioe.common.domain.DataResult;
 import com.ioe.common.domain.ListResult;
+
 import java.util.*;
 import java.math.BigDecimal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.ioe.entity.Schedule;
 
 /**
-* 描述：
-* @author wangjs
-* @date 2018-04-19
-*/
+ * 描述：
+ *
+ * @author wangjs
+ * @date 2018-04-19
+ */
 @Service("scheduleService")
 public class ScheduleServiceImpl implements ScheduleService {
 
@@ -28,10 +35,12 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Resource
     private ScheduleDao scheduleDao;
+    @Resource
+    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
-    * 单个保存
-    */
+     * 单个保存
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
@@ -39,198 +48,188 @@ public class ScheduleServiceImpl implements ScheduleService {
             String scheduleId,
             String movieId,
             String hallId,
-            BigDecimal schedulePrice,
+            String schedulePrice,
             String scheduleBegindatetime,
             String operator
-    ){
+    ) {
         DataResult<String> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(scheduleId, movieId, hallId, schedulePrice, scheduleBegindatetime, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
             Schedule schedule = new Schedule();
-            schedule.setId(CoderGenerator.getDeviceCode(NewCodeUtil.nodeId()));
+            schedule.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
             schedule.setScheduleId(scheduleId);
             schedule.setMovieId(movieId);
             schedule.setHallId(hallId);
-            schedule.setSchedulePrice(schedulePrice);
+            schedule.setSchedulePrice(new BigDecimal(schedulePrice));
             schedule.setScheduleBegindatetime(scheduleBegindatetime);
+            schedule.setSysCreator(operator);
+            schedule.setSysUpdater(operator);
             scheduleDao.save(schedule);
             // TODO : 后置代码
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("saveSchedule error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveSchedule is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 批量保存
-    */
+     * 批量保存
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> saveScheduleBatch(String scheduleJson, String operator){
-        DataResult<Boolean> result = new DataResult();
-        if(CommonUtils.isEmpty(scheduleJson)){
-            result.setCode("1");
-            result.setCode("1");
+    public ListResult<String> saveScheduleBatch(String scheduleJson, String operator) {
+        ListResult<String> result = new ListResult<String>();
+        if (CommonUtils.isEmpty(scheduleJson)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             List<Schedule> scheduleList = CommonUtils.getListByJson(scheduleJson, Schedule.class);
 
-            if (CommonUtils.isEmpty(scheduleList)) {
-                result.setCode("1");
-                result.setMessage("1");
-                return result;
+            List<String> ids = new ArrayList<String>();
+            for (Schedule schedule : scheduleList) {
+                schedule.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                ids.add(schedule.getId());
             }
-
-            // TODO : 前置代码
             scheduleDao.saveBatch(scheduleList);
-            result.setData(True);
+            result.setDataList(ids);
 
-            // TODO : 后置代码
-        } catch (Exception e){
+
+        } catch (Exception e) {
             logger.error("saveScheduleBatch error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.CREAT_ERROR);
+            result.setMessage("saveScheduleBatch is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据id获取对象
-    */
+     * 根据id获取对象
+     */
     @Override
 
-    public ListResult<Schedule> getScheduleById (String id, int availData){
+    public ListResult<Schedule> getScheduleById(String id) {
         ListResult<Schedule> result = new ListResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isEmpty(id)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-            List<Schedule> scheduleList = scheduleDao.getById(id, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(scheduleList)){
-                result.setDataList(scheduleList);
-            }
-        } catch (Exception e){
-            logger.error("saveScheduleById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+        try {
+
+            List<Schedule> scheduleList = scheduleDao.getById(id);
+
+            result.setDataList(scheduleList);
+
+        } catch (Exception e) {
+            logger.error("getScheduleById error:{}", e.getMessage());
+            result.setCode(ErrorEnum.GET_ERROR);
+            result.setMessage("getScheduleById is error");
         }
         return result;
     }
 
     /**
-    * 根据id删除对象
-    */
+     * 根据id删除对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Integer> deleteScheduleById(String id, String operator){
+    public DataResult<Integer> deleteScheduleById(String id, String operator) {
         DataResult<Integer> result = new DataResult();
-        if(CommonUtils.isEmpty(id)){
-            result.setCode("1");
-            result.setCode("1");
+        if (CommonUtils.isAnyEmpty(id, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
-            // TODO : 前置代码
-        int count = scheduleDao.deleteById(id, operator);
-            // TODO : 后置代码
+        try {
+
+            int count = scheduleDao.deleteById(id, operator);
+
             result.setData(count);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("deleteScheduleById error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.DELETE_ERROR);
+            result.setMessage("deleteScheduleById is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
 
-
     /**
-    * 更新对象
-    */
+     * 更新对象
+     */
     @Override
 
     @Transactional(rollbackFor = Exception.class)
-    public DataResult<Boolean> updateSchedule(
+    public DataResult<Integer> updateSchedule(
             String id,
             String scheduleId,
             String movieId,
             String hallId,
-            BigDecimal schedulePrice,
+            String schedulePrice,
             String scheduleBegindatetime,
             String operator
-    ){
-        DataResult<Boolean> result = new DataResult();
-        if(false){
-            result.setCode("1");
-            result.setCode("1");
+    ) {
+        DataResult<Integer> result = new DataResult();
+
+        if (CommonUtils.isAnyEmpty(id, scheduleId, movieId, hallId, schedulePrice,scheduleBegindatetime, operator)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
             return result;
         }
-        try{
+        try {
             // TODO : 前置代码
-        Schedule schedule = new Schedule();
-        schedule.setId(id);
-        schedule.setScheduleId(scheduleId);
-        schedule.setMovieId(movieId);
-        schedule.setHallId(hallId);
-        schedule.setSchedulePrice(schedulePrice);
-        schedule.setScheduleBegindatetime(scheduleBegindatetime);
-        schedule.setSysUpdater(operator);
-        scheduleDao.update(schedule);
-            // TODO : 后置代码
-            result.setData(True);
-        } catch (Exception e){
+            Schedule schedule = new Schedule();
+            schedule.setId(id);
+            schedule.setScheduleId(scheduleId);
+            schedule.setMovieId(movieId);
+            schedule.setHallId(hallId);
+            schedule.setSchedulePrice(new BigDecimal(schedulePrice));
+            schedule.setScheduleBegindatetime(scheduleBegindatetime);
+            schedule.setSysUpdater(operator);
+            int count = scheduleDao.update(schedule);
+            result.setData(count);
+
+        } catch (Exception e) {
             logger.error("updateSchedule error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.UPDETE_ERROR);
+            result.setMessage("updateSchedule is error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         }
         return result;
     }
 
     /**
-    * 根据scheduleId查询记录
-    *
-    * @param scheduleId 电影时间表ID
-	
-    */
+     * 根据scheduleId查询记录
+     *
+     * @param scheduleId 电影时间表ID
+     */
     @Override
 
-    public ListResult<Schedule> getScheduleByScheduleId (String scheduleId, int availData){
+    public ListResult<Schedule> getScheduleByScheduleId(String scheduleId) {
         ListResult<Schedule> result = new ListResult();
-        //TODO:数据校验
-        //if(){
-        //    result.setCode("1");
-        //    result.setCode("1");
-        //    return result;
-        //}
-        try{
-            // TODO : 前置代码
-            List<Schedule> scheduleList = scheduleDao.getByScheduleId(scheduleId, availData);
-            // TODO : 后置代码
-            if(CommonUtils.isNotEmpty(scheduleList)){
+        if (CommonUtils.isEmpty(scheduleId)) {
+            result.setCode(ErrorEnum.EMPTY_ERROR);
+            return result;
+        }
+        try {
+
+            List<Schedule> scheduleList = scheduleDao.getByScheduleId(scheduleId);
+
                 result.setDataList(scheduleList);
-            }
-        } catch (Exception e){
+
+        } catch (Exception e) {
             logger.error("getScheduleByScheduleId error:{}", e.getMessage());
-            result.setCode("1");
-            result.setMessage("1");
+            result.setCode(ErrorEnum.QUERY_ERROR);
+            result.setMessage("getScheduleByScheduleId is error");
         }
         return result;
     }

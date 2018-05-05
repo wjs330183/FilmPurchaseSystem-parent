@@ -18,10 +18,10 @@ public interface OrderSeatDao {
 
     int update(@Param("entity")OrderSeat entity);
 
-    List<OrderSeat> getById (@Param("id")String id, @Param("availData")int availData);
+    List<OrderSeat> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
-
+    List<OrderSeat> getByOrderseatId (String orderseatId);
 
 }

@@ -26,13 +26,13 @@ public interface OrderSeatService {
     * @param orderseatJson 对象集合 Json 字符串
     * @param operator 操作者编号
     */
-    DataResult<Boolean> saveOrderseatBatch(String orderseatJson, String operator);
+    ListResult<String>  saveOrderseatBatch(String orderseatJson, String operator);
 
     /**
     * 根据id获取对象
     * @param id 
     */
-    ListResult<OrderSeat> getOrderseatById (String id, int availData);
+    ListResult<OrderSeat> getOrderseatById (String id);
 
     /**
     * 根据id删除对象
@@ -50,6 +50,13 @@ public interface OrderSeatService {
 	
     * @param operator 操作者编号
     */
-    DataResult<Boolean> updateOrderseat(String id, String orderdetailId, String seatId, String operator);
+    DataResult<Integer> updateOrderseat(String id, String orderdetailId, String seatId, String operator);
 
+    /**
+     * 根据orderseatId查询记录
+     *
+     * @param orderseatId 订单ID
+
+     */
+    ListResult<OrderSeat> getOrderSeatByOrderseatId (String orderseatId);
 }

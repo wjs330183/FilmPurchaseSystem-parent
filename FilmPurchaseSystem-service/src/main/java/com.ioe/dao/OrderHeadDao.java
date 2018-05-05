@@ -18,7 +18,7 @@ public interface OrderHeadDao {
 
     int update(@Param("entity")OrderHead entity);
 
-    List<OrderHead> getById (@Param("id")String id, @Param("availData")int availData);
+    List<OrderHead> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface OrderHeadDao {
     /**
     * index:t_cjlu_orderhead ==> OrderHead_ID_UNIQUE
     */
-    List<OrderHead> getByOrderheadId (String orderheadId, @Param("availData")int availData);
+    List<OrderHead> getByOrderheadId (String orderheadId);
 
 }

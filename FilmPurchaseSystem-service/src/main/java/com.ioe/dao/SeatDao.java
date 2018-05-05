@@ -18,7 +18,7 @@ public interface SeatDao {
 
     int update(@Param("entity")Seat entity);
 
-    List<Seat> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Seat> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface SeatDao {
     /**
     * index:t_cjlu_seat ==> Seat_ID_UNIQUE
     */
-    List<Seat> getBySeatId (String seatId, @Param("availData")int availData);
+    List<Seat> getBySeatId (String seatId);
 
 }

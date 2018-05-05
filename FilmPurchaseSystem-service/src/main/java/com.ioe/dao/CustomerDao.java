@@ -18,7 +18,7 @@ public interface CustomerDao {
 
     int update(@Param("entity")Customer entity);
 
-    List<Customer> getById (@Param("id")String id, @Param("availData")int availData);
+    List<Customer> getById (@Param("id")String id);
 
     int deleteById (String id, @Param("operator")String operator);
 
@@ -27,6 +27,6 @@ public interface CustomerDao {
     /**
     * index:t_cjlu_customer ==> Customer_ID_UNIQUE
     */
-    List<Customer> getByCustomerId (String customerId, @Param("availData")int availData);
+    List<Customer> getByCustomerId (String customerId);
 
 }
