@@ -40,20 +40,15 @@
     <insert id="save" >
         insert into
         <include refid="tableName"/>
-        (<include refid="columns"/>) values
+        (id,class_id,class_name,class_discount,class_isactive,sys_creator,sys_updater) values
         (
-            #{entity.id},
-            #{entity.classId},
-            #{entity.className},
-            #{entity.classDiscount},
-            #{entity.classIsactive},
-            #{entity.sysCreateTime},
-            #{entity.sysCreator},
-            #{entity.sysUpdateTime},
-            #{entity.sysUpdater},
-            #{entity.sysDeleted},
-            #{entity.sysHash},
-            #{entity.sysAvailData}
+        #{entity.id},
+        #{entity.classId},
+        #{entity.className},
+        #{entity.classDiscount},
+        #{entity.classIsactive},
+        #{entity.sysCreator},
+        #{entity.sysUpdater}
         )
     </insert>
 
@@ -61,7 +56,7 @@
     <insert id="saveBatch">
         insert into
         <include refid="tableName"/>
-        (<include refid="columns"/>) values
+        (id,class_id,class_name,class_discount,class_isactive,sys_creator,sys_updater) values
         <foreach collection="entities" item="entity" separator=",">
         (
             #{entity.id},
@@ -69,13 +64,8 @@
             #{entity.className},
             #{entity.classDiscount},
             #{entity.classIsactive},
-            #{entity.sysCreateTime},
             #{entity.sysCreator},
-            #{entity.sysUpdateTime},
-            #{entity.sysUpdater},
-            #{entity.sysDeleted},
-            #{entity.sysHash},
-            #{entity.sysAvailData}
+            #{entity.sysUpdater}
         )
         </foreach>
     </insert>
