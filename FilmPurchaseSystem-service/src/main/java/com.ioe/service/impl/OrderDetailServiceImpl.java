@@ -29,15 +29,14 @@ import org.slf4j.LoggerFactory;
  * @author wangjs
  * @date 2018-04-19
  */
-@Service("orderdetailService")
+@Service("orderDetailService")
 public class OrderDetailServiceImpl implements OrderDetailService {
 
     private static Logger logger = LoggerFactory.getLogger(OrderDetailServiceImpl.class);
 
     @Resource
     private OrderDetailDao orderdetailDao;
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
+
 
     /**
      * 单个保存
@@ -59,7 +58,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
         }
         try {
             OrderDetail orderdetail = new OrderDetail();
-            orderdetail.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            orderdetail.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             orderdetail.setOrderDetailId(orderdetailId);
             orderdetail.setOrderHeadId(orderheadId);
             orderdetail.setScheduleId(scheduleId);
@@ -93,7 +92,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
 
             List<String> ids = new ArrayList<String>();
             for (OrderDetail orderDetail : orderdetailList) {
-                orderDetail.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                orderDetail.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(orderDetail.getId());
             }
             orderdetailDao.saveBatch(orderdetailList);

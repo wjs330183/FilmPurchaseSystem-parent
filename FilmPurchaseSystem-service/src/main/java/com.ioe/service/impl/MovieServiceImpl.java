@@ -36,8 +36,7 @@ public class MovieServiceImpl implements MovieService {
     @Resource
     private MovieDao movieDao;
 
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
+
 
     /**
      * 单个保存
@@ -62,7 +61,7 @@ public class MovieServiceImpl implements MovieService {
         }
         try {
             Movie movie = new Movie();
-            movie.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            movie.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             movie.setMovieId(movieId);
             movie.setMovieName(movieName);
             movie.setMovieMainactor(movieMainactor);
@@ -98,7 +97,7 @@ public class MovieServiceImpl implements MovieService {
 
             List<String> ids = new ArrayList<String>();
             for (Movie movie : movieList) {
-                movie.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                movie.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(movie.getId());
             }
             movieDao.saveBatch(movieList);

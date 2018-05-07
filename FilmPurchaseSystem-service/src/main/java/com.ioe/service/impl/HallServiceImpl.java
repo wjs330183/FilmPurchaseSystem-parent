@@ -35,8 +35,7 @@ public class HallServiceImpl implements HallService {
     @Resource
     private HallDao hallDao;
 
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
+
     /**
      * 单个保存
      */
@@ -56,7 +55,7 @@ public class HallServiceImpl implements HallService {
         }
         try {
             Hall hall = new Hall();
-            hall.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            hall.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             hall.setHallId(hallId);
             hall.setHallSeats(hallSeats);
             hall.setHallDescription(hallDescription);
@@ -89,7 +88,7 @@ public class HallServiceImpl implements HallService {
 
             List<String> ids = new ArrayList<String>();
             for (Hall hall : hallList) {
-                hall.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                hall.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(hall.getId());
             }
             hallDao.saveBatch(hallList);
@@ -175,7 +174,7 @@ public class HallServiceImpl implements HallService {
             return result;
         }
         try {
-            // TODO : 前置代码
+
             Hall hall = new Hall();
             hall.setId(id);
             hall.setHallId(hallId);

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="com.ioe.dao.t_cjlu_customerDao">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ioe.dao.CustomerDao">
 
-    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_customerEntity">
+    <resultMap id="resultMap" type="com.ioe.entity.Customer">
         <result property="id" column="id" jdbcType="VARCHAR"/>
         <result property="customerId" column="customer_id" jdbcType="VARCHAR"/>
         <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
@@ -59,7 +60,7 @@
     </insert>
 
     <!-- mutipule entity save -->
-    <insert id="insertBatch">
+    <insert id="saveBatch">
         insert into
         <include refid="tableName"/>
         (<include refid="columns"/>) values
@@ -99,7 +100,7 @@
 
 
 <!-- update entity -->
-    <update id="update" parameterType="com.ioe.entity.Customer">
+    <update id="update" >
         update
         <include refid="tableName"/>
         set

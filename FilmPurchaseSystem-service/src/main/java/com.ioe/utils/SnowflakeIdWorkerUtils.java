@@ -128,4 +128,13 @@ public class SnowflakeIdWorkerUtils {
     protected long timeGen() {
         return System.currentTimeMillis();
     }
+
+
+    public static String getnextId(String operator){
+
+        long l = Long.parseLong(operator);
+        SnowflakeIdWorkerUtils snowflakeIdWorkerUtils=new SnowflakeIdWorkerUtils(l ,l);
+        return String.valueOf(snowflakeIdWorkerUtils.nextId());
+
+    }
 }

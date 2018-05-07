@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="com.ioe.dao.t_cjlu_classDao">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ioe.dao.ClassDao">
 
-    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_classEntity">
+    <resultMap id="resultMap" type="com.ioe.entity.Class">
         <result property="id" column="id" jdbcType="VARCHAR"/>
         <result property="classId" column="class_id" jdbcType="VARCHAR"/>
         <result property="className" column="class_name" jdbcType="VARCHAR"/>
         <result property="classDiscount" column="class_discount" jdbcType="DECIMAL"/>
-        <result property="classIsactive" column="class_isactive" jdbcType="INT UNSIGNED"/>
+        <result property="classIsactive" column="class_isactive" jdbcType="INTEGER"/>
         <result property="sysCreateTime" column="sys_create_time" jdbcType="TIMESTAMP"/>
         <result property="sysCreator" column="sys_creator" jdbcType="VARCHAR"/>
         <result property="sysUpdateTime" column="sys_update_time" jdbcType="TIMESTAMP"/>
@@ -17,6 +18,7 @@
         <result property="sysHash" column="sys_hash" jdbcType="VARCHAR"/>
         <result property="sysAvailData" column="sys_avail_data" jdbcType="TINYINT"/>
     </resultMap>
+
 
     <sql id="tableName">t_cjlu_class</sql>
     <sql id="columns">
@@ -35,7 +37,7 @@
     </sql>
 
     <!-- single entity save -->
-    <insert id="save">
+    <insert id="save" >
         insert into
         <include refid="tableName"/>
         (<include refid="columns"/>) values
@@ -56,11 +58,11 @@
     </insert>
 
     <!-- mutipule entity save -->
-    <insert id="insertBatch">
+    <insert id="saveBatch">
         insert into
         <include refid="tableName"/>
         (<include refid="columns"/>) values
-        <foreach collection="entities" open="(" close=")" item="entity" separator=",">
+        <foreach collection="entities" item="entity" separator=",">
         (
             #{entity.id},
             #{entity.classId},

@@ -35,8 +35,6 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Resource
     private ScheduleDao scheduleDao;
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
      * 单个保存
@@ -58,9 +56,9 @@ public class ScheduleServiceImpl implements ScheduleService {
             return result;
         }
         try {
-            // TODO : 前置代码
+
             Schedule schedule = new Schedule();
-            schedule.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            schedule.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             schedule.setScheduleId(scheduleId);
             schedule.setMovieId(movieId);
             schedule.setHallId(hallId);
@@ -69,7 +67,7 @@ public class ScheduleServiceImpl implements ScheduleService {
             schedule.setSysCreator(operator);
             schedule.setSysUpdater(operator);
             scheduleDao.save(schedule);
-            // TODO : 后置代码
+
         } catch (Exception e) {
             logger.error("saveSchedule error:{}", e.getMessage());
             result.setCode(ErrorEnum.CREAT_ERROR);
@@ -96,7 +94,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 
             List<String> ids = new ArrayList<String>();
             for (Schedule schedule : scheduleList) {
-                schedule.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                schedule.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(schedule.getId());
             }
             scheduleDao.saveBatch(scheduleList);
@@ -186,7 +184,7 @@ public class ScheduleServiceImpl implements ScheduleService {
             return result;
         }
         try {
-            // TODO : 前置代码
+
             Schedule schedule = new Schedule();
             schedule.setId(id);
             schedule.setScheduleId(scheduleId);

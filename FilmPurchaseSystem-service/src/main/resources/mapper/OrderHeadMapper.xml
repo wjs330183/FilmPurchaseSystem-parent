@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="com.ioe.dao.t_cjlu_orderheadDao">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ioe.dao.OrderHeadDao">
 
-    <resultMap id="resultMap" type="com.ioe.dto.t_cjlu_orderheadEntity">
+    <resultMap id="resultMap" type="com.ioe.entity.OrderHead">
         <result property="id" column="id" jdbcType="VARCHAR"/>
-        <result property="orderheadId" column="orderhead_id" jdbcType="VARCHAR"/>
-        <result property="orderheadBuydate" column="orderhead_buydate" jdbcType="DATE"/>
+        <result property="orderHeadId" column="orderhead_id" jdbcType="VARCHAR"/>
+        <result property="orderHeadBuyDate" column="orderhead_buydate" jdbcType="DATE"/>
         <result property="customerId" column="customer_id" jdbcType="VARCHAR"/>
         <result property="sysCreateTime" column="sys_create_time" jdbcType="TIMESTAMP"/>
         <result property="sysCreator" column="sys_creator" jdbcType="VARCHAR"/>
@@ -53,7 +54,7 @@
     </insert>
 
     <!-- mutipule entity save -->
-    <insert id="insertBatch">
+    <insert id="saveBatch">
         insert into
         <include refid="tableName"/>
         (<include refid="columns"/>) values
@@ -91,7 +92,7 @@
 
 
 <!-- update entity -->
-    <update id="update" parameterType="com.ioe.entity.Orderhead">
+    <update id="update" >
         update
         <include refid="tableName"/>
         set

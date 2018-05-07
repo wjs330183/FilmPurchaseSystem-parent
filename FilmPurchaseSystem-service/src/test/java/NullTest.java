@@ -23,7 +23,6 @@ public class NullTest {
     public void tearDown()  {
     }
     @Test
-    @Ignore
     public void nullTest()  {
     }
 

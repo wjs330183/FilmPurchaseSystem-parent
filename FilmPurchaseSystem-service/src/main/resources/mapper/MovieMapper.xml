@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="com.ioe.dao.t_cjlu_movieDao">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ioe.dao.MovieDao">
 
     <resultMap id="resultMap" type="com.ioe.entity.Movie">
         <result property="id" column="id" jdbcType="VARCHAR"/>
@@ -65,7 +66,7 @@
     </insert>
 
     <!-- mutipule entity save -->
-    <insert id="insertBatch">
+    <insert id="saveBatch">
         insert into
         <include refid="tableName"/>
         (<include refid="columns"/>) values

@@ -24,15 +24,14 @@ import org.slf4j.LoggerFactory;
 * @author wangjs
 * @date 2018-04-19
 */
-@Service("orderheadService")
+@Service("orderHeadService")
 public class OrderHeadServiceImpl implements OrderHeadService {
 
     private static Logger logger = LoggerFactory.getLogger(OrderHeadServiceImpl.class);
 
     @Resource
     private OrderHeadDao orderheadDao;
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
+
     /**
     * 单个保存
     */
@@ -51,7 +50,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
         }
         try{
             OrderHead orderhead = new OrderHead();
-            orderhead.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            orderhead.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             orderhead.setOrderHeadId(orderheadId);
             orderhead.setOrderHeadBuyDate(orderheadBuydate);
             orderhead.setCustomerId(customerId);
@@ -84,7 +83,7 @@ public class OrderHeadServiceImpl implements OrderHeadService {
 
             List<String> ids = new ArrayList<String>();
             for (OrderHead orderHead : orderheadList) {
-                orderHead.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                orderHead.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(orderHead.getId());
             }
             orderheadDao.saveBatch(orderheadList);

@@ -37,8 +37,6 @@ public class ClassServiceImpl implements ClassService {
     @Resource
     private ClassDao classDao;
 
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
     /**
      * 单个保存
      */
@@ -58,7 +56,7 @@ public class ClassServiceImpl implements ClassService {
         }
         try {
             Class aClass = new Class();
-            aClass.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            aClass.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             aClass.setClassId(classId);
             aClass.setClassName(className);
             aClass.setClassDiscount(new BigDecimal(classDiscount));
@@ -93,7 +91,7 @@ public class ClassServiceImpl implements ClassService {
 
             List<String> ids = new ArrayList<String>();
             for (Class aClass : classList) {
-                aClass.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                aClass.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(aClass.getId());
             }
             classDao.saveBatch(classList);

@@ -34,8 +34,6 @@ public class SeatServiceImpl implements SeatService {
 
     @Resource
     private SeatDao seatDao;
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
      * 单个保存
@@ -57,7 +55,7 @@ public class SeatServiceImpl implements SeatService {
         }
         try {
             Seat seat = new Seat();
-            seat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            seat.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             seat.setSeatId(seatId);
             seat.setHallId(hallId);
             seat.setSeatRow(seatRow);
@@ -66,7 +64,7 @@ public class SeatServiceImpl implements SeatService {
             seat.setSysCreator(operator);
             seat.setSysUpdater(operator);
             seatDao.save(seat);
-            // TODO : 后置代码
+
         } catch (Exception e) {
             logger.error("saveSeat error:{}", e.getMessage());
             result.setCode(ErrorEnum.CREAT_ERROR);
@@ -93,7 +91,7 @@ public class SeatServiceImpl implements SeatService {
 
             List<String> ids = new ArrayList<String>();
             for (Seat seat : seatList) {
-                seat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                seat.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(seat.getId());
             }
             seatDao.saveBatch(seatList);

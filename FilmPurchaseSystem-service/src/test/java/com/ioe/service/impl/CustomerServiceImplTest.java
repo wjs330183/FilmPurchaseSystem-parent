@@ -40,9 +40,9 @@ public class CustomerServiceImplTest {
         customer.setCustomerId("123111");
         customer.setCustomerMobile("12343567865");
         customer.setCustomerName("mimi");
-
         String customerJson = JSONObject.toJSONString(customer);
-        customerService.createCustomer(customerJson);
+        String operator = "007";
+        customerService.saveCustomerBatch(customerJson,operator);
     }
 
 }

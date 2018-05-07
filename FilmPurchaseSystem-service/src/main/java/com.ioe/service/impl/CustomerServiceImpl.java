@@ -36,8 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Resource
     private CustomerDao customerDao;
 
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
+
     /**
      * 单个保存
      */
@@ -58,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
         try {
             Customer customer = new Customer();
-            customer.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            customer.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             customer.setCustomerId(customerId);
             customer.setCustomerName(customerName);
             customer.setCustomerEmail(customerEmail);
@@ -93,7 +92,7 @@ public class CustomerServiceImpl implements CustomerService {
 
             List<String> ids = new ArrayList<String>();
             for (Customer customer : customerList) {
-                customer.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                customer.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(customer.getId());
             }
             customerDao.saveBatch(customerList);

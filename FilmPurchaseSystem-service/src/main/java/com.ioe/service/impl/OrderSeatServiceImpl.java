@@ -27,15 +27,13 @@ import com.ioe.entity.OrderSeat;
  * @author wangjs
  * @date 2018-04-19
  */
-@Service("orderseatService")
+@Service("orderSeatService")
 public class OrderSeatServiceImpl implements OrderSeatService {
 
     private static Logger logger = LoggerFactory.getLogger(OrderSeatServiceImpl.class);
 
     @Resource
     private OrderSeatDao orderseatDao;
-    @Resource
-    private SnowflakeIdWorkerUtils snowflakeIdWorkerUtils;
 
     /**
      * 单个保存
@@ -55,7 +53,7 @@ public class OrderSeatServiceImpl implements OrderSeatService {
         try {
 
             OrderSeat orderSeat = new OrderSeat();
-            orderSeat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+            orderSeat.setId(SnowflakeIdWorkerUtils.getnextId(operator));
             orderSeat.setOrderDetailId(orderdetailId);
             orderSeat.setSeatId(seatId);
             orderSeat.setSysCreator(operator);
@@ -87,7 +85,7 @@ public class OrderSeatServiceImpl implements OrderSeatService {
 
             List<String> ids = new ArrayList<String>();
             for (OrderSeat orderseat : orderSeatList) {
-                orderseat.setId(String.valueOf(snowflakeIdWorkerUtils.nextId()));
+                orderseat.setId(SnowflakeIdWorkerUtils.getnextId(operator));
                 ids.add(orderseat.getId());
             }
 
