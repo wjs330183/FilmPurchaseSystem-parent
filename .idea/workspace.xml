@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00f6ca5d-ec17-4bac-952b-423cfdede953" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmPurchaseSystem_service_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/ClassService.class" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-client/target/classes/com/ioe/service/CustomerService.class" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/FilmPurchaseSystem-service.iml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ClassServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/CustomerServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/HallServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/MovieServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderDetailServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderDetailServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderHeadServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderHeadServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderSeatServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/OrderSeatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/ScheduleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/service/impl/SeatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/SnowflakeIdWorkerUtils.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/java/com.ioe/utils/SnowflakeIdWorkerUtils.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ClassMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/CustomerMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/HallMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/HallMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/MovieMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/MovieMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderDetailMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderDetailMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderHeadMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderHeadMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderSeatMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/OrderSeatMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ScheduleMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/ScheduleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/SeatMapper.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/mapper/SeatMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/main/resources/spring/spring-context.xml" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/NullTest.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/ClassServiceImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/src/test/java/com/ioe/service/impl/CustomerServiceImplTest.java" />
       <change beforePath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" afterPath="$PROJECT_DIR$/FilmPurchaseSystem-service/target/classes/spring/spring-context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -853,7 +827,8 @@
     <MESSAGE value="整理" />
     <MESSAGE value="删除availData" />
     <MESSAGE value="ServiceImpl完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="ServiceImpl完成" />
+    <MESSAGE value="Test error.&#10;事务回滚错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test error.&#10;事务回滚错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
